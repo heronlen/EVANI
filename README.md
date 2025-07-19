@@ -7,7 +7,6 @@ and https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-
 (pdf versions)
 
 Google Geminii
-Cmd: can you take the data from the two pdf's format into a json file, from the Electricity Price Comparison Table add a Night Unit rate of zero to match the Economy 7 Price Comparison Table data. 
-Remove the annual cost from Electricity Price Comparison Table
+Cmd: can you take the data from the two pdf's format into a json file, from the Electricity Price Comparison Table add a Night Unit rate of zero to match the Economy 7 Price Comparison Table data. Remove the annual cost from Electricity Price Comparison Table can you sort the data so that all suppliers similar suppliers are listed below each other?
 
 Copy and paste into 
