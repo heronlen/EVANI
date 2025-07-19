@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Economy 7 & Standard Electricity Tariff Calculator - BETA</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Light blue-gray background */
+            background-color: #f0f4f8;
+        }
+        .container {
+            max-width: 900px;
+        }
+        /* Custom styles for better button appearance */
+        button {
+            transition: all 0.2s ease-in-out;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex; /* Keep flex for centering, will be overridden by JS for hidden state */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            max-width: 600px;
+            width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #003C4B; /* Darker shade of primary blue/teal */
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #004E64; /* Primary blue/teal */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white p-8 rounded-xl shadow-lg w-full">
+        <div class="flex flex-col items-center mb-6 relative">
+            <!--
+                The image "EVA_NI_Logo_TRANSPARENT.png" is referenced directly by filename.
+                If it's not appearing, it's likely due to how images are served in this environment.
+                To ensure visibility, you might need to:
+                1. Upload the image to a public hosting service (e.g., Imgur, GitHub Pages)
+                   and use the direct URL here:
+                   <img src="YOUR_PUBLIC_IMAGE_URL_HERE" alt="EVA NI Logo" class="w-24 h-auto mb-4">
+                2. Convert the image to a Base64 string and embed it directly (this can make the HTML file very large):
+                   <img src="data:image/png;base64,YOUR_BASE64_STRING_HERE" alt="EVA NI Logo" class="w-24 h-auto mb-4">
+
+                For now, a publicly accessible URL has been used for the logo to ensure visibility.
+            -->
+            <img src="https://evani.uk/wp-content/uploads/2021/02/evani-logo3.png" alt="EVA NI Logo" class="w-24 h-auto mb-4">
+            <h1 class="text-3xl font-bold text-center text-gray-800">Domestic Economy 7 & Standard Electricity Tariff Calculator - BETA</h1>
+        </div>
+        <p class="text-gray-600 text-center mb-8">Enter your monthly day and night electricity consumption (in kWh) to find the cheapest providers in Northern Ireland, generally it is cheaper to charge an EV during the night.</p>
+
+        <button id="toggleEVInfoBtn"
+                class="w-full bg-gray-200 text-gray-700 p-2 rounded-lg font-bold text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 shadow-sm mb-6">
+            Need help estimating EV consumption?
+        </button>
+
+        <div id="evInfoSection" class="hidden bg-blue-50 p-4 rounded-lg mb-8 text-gray-700">
+            <p class="font-semibold mb-4 text-center">Estimate your monthly night consumption based on EV examples:</p>
+            <div class="mb-4">
+                <label for="monthlyDrivingDistance" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Enter your estimated monthly driving distance (miles):
+                </label>
+                <input type="number" id="monthlyDrivingDistance" placeholder="e.g., 500"
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#004E64] focus:border-transparent text-gray-800" min="0">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- Peugeot e-208 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-bold text-lg mb-2">Peugeot e-208</h4>
+                    <p class="text-sm mb-3 min-h-20 flex items-center justify-center">
+                        Efficiency: <br>
+                        4.5 miles per kWh
+                    </p>
+                    <button onclick="estimateMonthlyEVConsumption(4.5)"
+                            class="w-full bg-[#00A878] text-white p-2 rounded-lg text-sm hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50">
+                        Estimate Monthly kWh
+                    </button>
+                </div>
+                <!-- Volkswagen ID.3 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-bold text-lg mb-2">Volkswagen ID.3</h4>
+                    <p class="text-sm mb-3 min-h-20 flex items-center justify-center">
+                        Efficiency: <br>
+                        4.8 miles per kWh
+                    </p>
+                    <button onclick="estimateMonthlyEVConsumption(4.8)"
+                            class="w-full bg-[#00A878] text-white p-2 rounded-lg text-sm hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50">
+                        Estimate Monthly kWh
+                    </button>
+                </div>
+                <!-- Renault Megane E-Tech -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-bold text-lg mb-2">Renault Megane E-Tech</h4>
+                    <p class="text-sm mb-3 min-h-20 flex items-center justify-center">
+                        Efficiency: <br>
+                        4.87 miles per kWh
+                    </p>
+                    <button onclick="estimateMonthlyEVConsumption(4.87)"
+                            class="w-full bg-[#00A878] text-white p-2 rounded-lg text-sm hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50">
+                        Estimate Monthly kWh
+                    </button>
+                </div>
+                <!-- Tesla Model 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-bold text-lg mb-2">Tesla Model 3</h4>
+                    <p class="text-sm mb-3 min-h-20 flex items-center justify-center">
+                        Efficiency: <br>
+                        5.08 miles per kWh
+                    </p>
+                    <button onclick="estimateMonthlyEVConsumption(5.08)"
+                            class="w-full bg-[#00A878] text-white p-2 rounded-lg text-sm hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50">
+                        Estimate Monthly kWh
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6 mb-8">
+            <div>
+                <label for="dayConsumption" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Enter your monthly <strong>day</strong> consumption (kWh):
+                    <button id="dayConsumptionInfoBtn" class="ml-2 text-[#004E64] hover:text-[#003C4B] focus:outline-none" title="How to find this information">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9.293 11.293a1 1 0 001.414 1.414L12 10.414V14a1 1 0 102 0v-4a1 1 0 00-1-1h-3a1 1 0 00-.707.293z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </label>
+                <input type="number" id="dayConsumption" placeholder="e.g., 200"
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#004E64] focus:border-transparent text-gray-800" min="0">
+            </div>
+            <div>
+                <label for="nightConsumption" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Enter your monthly <strong>night</strong> consumption (kWh):
+                    <button id="nightConsumptionInfoBtn" class="ml-2 text-[#004E64] hover:text-[#003C4B] focus:outline-none" title="How to find this information">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9.293 11.293a1 1 0 001.414 1.414L12 10.414V14a1 1 0 102 0v-4a1 1 0 00-1-1h-3a1 1 0 00-.707.293z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </label>
+                <input type="number" id="nightConsumption" placeholder="e.g., 300" value="0"
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#004E64] focus:border-transparent text-gray-800" min="0">
+            </div>
+        </div>
+
+        <button id="calculateButton"
+                class="w-full bg-[#004E64] text-white p-3 rounded-lg font-bold text-lg hover:bg-[#003C4B] focus:outline-none focus:ring-2 focus:ring-[#004E64] focus:ring-opacity-50 shadow-md">
+            Calculate Cheapest Providers
+        </button>
+
+        <div id="results" class="mt-8">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="https://evani.uk/join/" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-[#00A878] text-white p-3 rounded-lg font-bold hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50 shadow-md">
+                JOIN THE EV ASSOCIATION NI (IT'S FREE)
+            </a>
+        </div>
+
+        <!-- New line with link to Consumer Council NI -->
+        <div class="text-center mt-4 text-sm text-gray-500">
+            Data from <a href="https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas/switching-electricity-or-gas-supplier/economy-7" target="_blank" rel="noopener noreferrer" class="text-[#004E64] hover:underline">Consumer Council NI</a>
+        </div>
+        <!-- Version information moved to bottom right -->
+        <div class="text-right text-xs text-gray-500 mt-2">v3.0 (19 July 25)</div>
+    </div>
+
+    <!-- AI Explanation Modal -->
+    <div id="aiExplanationModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="close-button" onclick="hideAIExplanationModal()">&times;</button>
+            <h3 class="text-xl font-bold text-gray-800 mb-4" id="aiExplanationTitle">Tariff Explanation</h3>
+            <div id="aiExplanationContent" class="text-gray-700 text-base">
+                <!-- AI generated content or loading spinner will go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Consumption Info Modal -->
+    <div id="consumptionInfoModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="closeConsumptionInfoModalBtn" class="close-button">&times;</button>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">How to Find Your Monthly Electricity Consumption</h3>
+            <div class="text-gray-700 text-base">
+                <p class="mb-2">To find your monthly electricity consumption as a domestic user, check your electricity bill.</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Billing Period:</strong> Your bill will clearly state the billing period, for example, “01 June - 30 June.”</li>
+                    <li><strong>Units Used (kWh):</strong> Look for a section that shows “Electricity Usage” or “Units Used” in kilowatt-hours (kWh). If you’re on a dual-rate tariff, there should be figures for day and night usage.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error/Info Modal (Custom Alert) -->
+    <div id="customAlertModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="close-button" onclick="hideCustomAlert()">&times;</button>
+            <h3 class="text-xl font-bold text-gray-800 mb-4" id="customAlertTitle"></h3>
+            <p id="customAlertMessage" class="text-gray-700 text-base"></p>
+            <div class="text-center mt-6">
+                <button onclick="hideCustomAlert()" class="px-6 py-2 bg-[#004E64] text-white rounded-lg hover:bg-[#003C4B] focus:outline-none focus:ring-2 focus:ring-[#004E64] focus:ring-opacity-50">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables to store tariff data once loaded
+        let economy7Providers = [];
+        let standardProviders = [];
+        let providers = []; // Combined list of all tariffs
+
+        /**
+         * Converts a price string (e.g., "26.193p") to a float number.
+         * @param {string} priceString - The price string to convert.
+         * @returns {number} The converted price as a float, or 0 if conversion fails.
+         */
+        function parsePrice(priceString) {
+            if (typeof priceString === 'string') {
+                const cleaned = priceString.replace('p', '').trim();
+                const parsed = parseFloat(cleaned);
+                return isNaN(parsed) ? 0 : parsed;
+            }
+            return 0;
+        }
+
+        /**
+         * Loads tariff data from the GitHub JSON repository.
+         */
+        async function loadTariffData() {
+            const githubRawUrl = 'https://raw.githubusercontent.com/heronlen/EVANI/79674be78fc59a88d54997c4c64a516dd0b5bde6/results.json';
+            try {
+                const response = await fetch(githubRawUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const rawData = await response.json();
+
+                // Initialize empty arrays for categorization
+                economy7Providers = [];
+                standardProviders = [];
+
+                // Process the raw data to fit the expected structure
+                rawData.forEach(item => {
+                    const tariff = {
+                        name: item['TARIFF NAME'],
+                        supplier: item['SUPPLIER'],
+                        paymentBillingMethod: item['PAYMENT & BILLING METHOD'],
+                        additionalInfo: item['ADDITIONAL INFORMATION'],
+                        // Convert price strings to numbers
+                        standingChargePencePerDay: parsePrice(item['STANDING CHARGE PENCE PER DAY'])
+                    };
+
+                    // Determine if it's Economy 7 or Standard based on NIGHT UNIT RATE
+                    const nightRateString = item['NIGHT UNIT RATE PENCE PER UNIT/KWH'];
+                    if (nightRateString && parsePrice(nightRateString) > 0) {
+                        // It's an Economy 7 tariff
+                        tariff.type = "economy7";
+                        tariff.dayRatePencePerKWh = parsePrice(item['PRICE IN PENCE PER UNIT/KWH']);
+                        tariff.nightRatePencePerKWh = parsePrice(nightRateString);
+                        economy7Providers.push(tariff);
+                    } else {
+                        // It's a Standard tariff (or night rate is 0)
+                        tariff.type = "standard";
+                        tariff.unitRatePencePerKWh = parsePrice(item['PRICE IN PENCE PER UNIT/KWH']);
+                        standardProviders.push(tariff);
+                    }
+                });
+
+                // Combine all providers for general use
+                providers = [...economy7Providers, ...standardProviders];
+                console.log("Tariff data loaded successfully from GitHub.");
+                console.log("Economy 7 Providers:", economy7Providers);
+                console.log("Standard Providers:", standardProviders);
+
+            } catch (error) {
+                console.error("Error loading tariff data from GitHub:", error);
+                showCustomAlert("Data Load Error", "Failed to load electricity tariff data from GitHub. Please check your internet connection or the data source.");
+            }
+        }
+
+        /**
+         * Displays a custom alert modal with a given title and message.
+         * @param {string} title - The title for the alert.
+         * @param {string} message - The message content for the alert.
+         */
+        function showCustomAlert(title, message) {
+            const modal = document.getElementById('customAlertModal');
+            const modalTitle = document.getElementById('customAlertTitle');
+            const modalMessage = document.getElementById('customAlertMessage');
+
+            if (modal && modalTitle && modalMessage) {
+                modalTitle.textContent = title;
+                modalMessage.textContent = message;
+                modal.style.display = 'flex';
+            }
+        }
+
+        /**
+         * Hides the custom alert modal.
+         */
+        function hideCustomAlert() {
+            const modal = document.getElementById('customAlertModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        /**
+         * Calculates the total monthly cost for a given tariff based on consumption.
+         * The standing charge is calculated based on exactly 30 days.
+         * @param {object} tariff - The tariff object containing rates and standing charge.
+         * @param {number} dayConsumption - Monthly day consumption in kWh.
+         * @param {number} nightConsumption - Monthly night consumption in kWh.
+         * @returns {object} An object containing the total cost and its breakdown components.
+         */
+        function calculateTariffCost(tariff, dayConsumption, nightConsumption) {
+            let totalCostPence = 0;
+            let dayCostPence = 0;
+            let nightCostPence = 0;
+            let effectiveDayRate = 0;
+            let effectiveNightRate = 0;
+
+            if (tariff.type === "economy7") {
+                effectiveDayRate = typeof tariff.dayRatePencePerKWh === 'number' ? tariff.dayRatePencePerKWh : 0;
+                effectiveNightRate = typeof tariff.nightRatePencePerKWh === 'number' ? tariff.nightRatePencePerKWh : 0;
+                dayCostPence = dayConsumption * effectiveDayRate;
+                nightCostPence = nightConsumption * effectiveNightRate;
+                totalCostPence = dayCostPence + nightCostPence;
+            } else if (tariff.type === "standard") {
+                effectiveDayRate = typeof tariff.unitRatePencePerKWh === 'number' ? tariff.unitRatePencePerKWh : 0;
+                const totalConsumption = dayConsumption + nightConsumption; // For standard, sum day and night
+                dayCostPence = totalConsumption * effectiveDayRate; // All consumption at one rate
+                nightCostPence = 0; // No separate night cost for standard tariffs
+                totalCostPence = dayCostPence;
+            }
+
+            const standingCharge = typeof tariff.standingChargePencePerDay === 'number' ? tariff.standingChargePencePerDay : 0;
+            const standingChargeMonthlyPence = standingCharge * 30;
+            totalCostPence += standingChargeMonthlyPence;
+
+            return {
+                totalCost: parseFloat((totalCostPence / 100).toFixed(2)),
+                dayCost: parseFloat((dayCostPence / 100).toFixed(2)),
+                nightCost: parseFloat((nightCostPence / 100).toFixed(2)),
+                standingChargeCost: parseFloat((standingChargeMonthlyPence / 100).toFixed(2)),
+                // Pass original tariff details through for breakdown display
+                name: tariff.name,
+                supplier: tariff.supplier,
+                dayRate: effectiveDayRate, // This will be unitRate for standard tariffs
+                nightRate: effectiveNightRate, // This will be 0 for standard tariffs
+                standingCharge: standingCharge,
+                additionalInfo: tariff.additionalInfo,
+                type: tariff.type
+            };
+        }
+
+        /**
+         * Calculates and displays the cheapest electricity providers, ensuring variety from top suppliers.
+         */
+        function calculateCheapest() {
+            const dayConsumptionInput = document.getElementById('dayConsumption');
+            const nightConsumptionInput = document.getElementById('nightConsumption');
+            const resultsDiv = document.getElementById('results');
+
+            // Crucial check: Ensure resultsDiv exists before trying to modify its innerHTML
+            if (!resultsDiv) {
+                console.error("Error: Results div (#results) not found. Cannot display results.");
+                return;
+            }
+
+            // Clear previous results
+            resultsDiv.innerHTML = '';
+
+            const dayConsumption = parseFloat(dayConsumptionInput.value);
+            const nightConsumption = parseFloat(nightConsumptionInput.value);
+
+            // Input validation
+            if (isNaN(dayConsumption) || isNaN(nightConsumption) || dayConsumption < 0 || nightConsumption < 0) {
+                resultsDiv.innerHTML = `
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative mt-4" role="alert">
+                        <strong class="font-bold">Input Error!</strong>
+                        <span class="block sm:inline">Please enter valid positive numbers for consumption.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            if (providers.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded-lg relative mt-4" role="alert">
+                        <strong class="font-bold">Data Not Loaded!</strong>
+                        <span class="block sm:inline">Tariff data is not available. Please try refreshing the page.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            // Calculate costs for all individual tariffs
+            const allCalculatedTariffs = providers.map(tariff => {
+                return calculateTariffCost(tariff, dayConsumption, nightConsumption);
+            });
+
+            // Group tariffs by supplier and find the cheapest tariff for each supplier
+            const suppliersData = {}; // Map: supplierName -> { cheapestTariff: {...}, allTariffs: [...] }
+
+            allCalculatedTariffs.forEach(tariff => {
+                const supplierName = tariff.supplier;
+                if (!suppliersData[supplierName]) {
+                    suppliersData[supplierName] = {
+                        supplierName: supplierName,
+                        cheapestTariff: tariff,
+                        allTariffs: []
+                    };
+                }
+                // Update the cheapest tariff for this supplier if a cheaper one is found
+                // Or if there is no cheapest tariff yet for this supplier
+                if (!suppliersData[supplierName].cheapestTariff || tariff.totalCost < suppliersData[supplierName].cheapestTariff.totalCost) {
+                    suppliersData[supplierName].cheapestTariff = tariff;
+                }
+                suppliersData[supplierName].allTariffs.push(tariff);
+            });
+
+            // Convert the object of suppliers into an array and sort by their cheapest tariff's cost
+            // Assign to the global topUniqueSuppliers variable
+            topUniqueSuppliers = Object.values(suppliersData);
+            topUniqueSuppliers.sort((a, b) => a.cheapestTariff.totalCost - b.cheapestTariff.totalCost);
+
+            // Display results (top 3 distinct suppliers)
+            if (topUniqueSuppliers.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded-lg relative mt-4" role="alert">
+                        <strong class="font-bold">No Data!</strong>
+                        <span class="block sm:inline">No provider data available to perform calculation.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            // Add the disclaimer before the results heading
+            let resultsHtml = `
+                <p class="text-center text-xs font-bold text-gray-600 mb-4">This calculator offers an estimate only. Always read the provider's full terms before switching. Updated 23/06/2025</p>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Top 3 Cheapest Providers</h2>
+                <div class="space-y-4">
+            `;
+
+            for (let i = 0; i < Math.min(3, topUniqueSuppliers.length); i++) {
+                const supplierData = topUniqueSuppliers[i];
+                const cheapestTariffForSupplier = supplierData.cheapestTariff;
+                // Updated colors for ranking based on EVA NI logo
+                const rankColor = i === 0 ? 'bg-[#E6F5F2] border-[#00A878] text-[#008A60]' : /* Light green, green border, darker green text */
+                                  i === 1 ? 'bg-[#E6EFF1] border-[#004E64] text-[#003C4B]' : /* Light blue/teal, blue/teal border, darker blue/teal text */
+                                  i === 2 ? 'bg-[#D9E6EB] border-[#A3C2D0] text-[#678B99]' : /* Light grey-blue, medium grey-blue border, darker grey-blue text */
+                                  'bg-gray-100 border-gray-300 text-gray-700';
+                
+                // Use HTML entities for medals
+                let medalHtml = '';
+                if (i === 0) {
+                    medalHtml = '&#x1F947;'; // Gold medal
+                } else if (i === 1) {
+                    medalHtml = '&#x1F948;'; // Silver medal
+                } else if (i === 2) {
+                    medalHtml = '&#x1F949;'; // Bronze medal
+                }
+
+                // Determine rate display based on tariff type
+                let rateDisplay = '';
+                if (cheapestTariffForSupplier.type === "economy7") {
+                    rateDisplay = `<li>Day Consumption (${dayConsumption} kWh @ ${cheapestTariffForSupplier.dayRate.toFixed(3)}p/kWh): <span class="font-medium">£${cheapestTariffForSupplier.dayCost.toFixed(2)}</span></li>
+                                   <li>Night Consumption (${nightConsumption} kWh @ ${cheapestTariffForSupplier.nightRate.toFixed(3)}p/kWh): <span class="font-medium">£${cheapestTariffForSupplier.nightCost.toFixed(2)}</span></li>`;
+                } else if (cheapestTariffForSupplier.type === "standard") {
+                    rateDisplay = `<li>Total Consumption (${dayConsumption + nightConsumption} kWh @ ${cheapestTariffForSupplier.dayRate.toFixed(3)}p/kWh): <span class="font-medium">£${cheapestTariffForSupplier.dayCost.toFixed(2)}</span></li>`;
+                }
+
+                // Add EVANI Member badge with specific links
+                let evaniSupporterBadge = '';
+                let supplierLink = '';
+                if (cheapestTariffForSupplier.supplier === "Share Energy") {
+                    supplierLink = "https://www.share-energy.com/";
+                } else if (cheapestTariffForSupplier.supplier === "Click Energy") {
+                    supplierLink = "https://www.clickenergyni.com/";
+                } else if (cheapestTariffForSupplier.supplier === "Power NI") {
+                    supplierLink = "https://powerni.co.uk/";
+                }
+
+                if (supplierLink) {
+                    evaniSupporterBadge = `<a href="${supplierLink}" target="_blank" rel="noopener noreferrer" class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full ml-2 hover:underline">EVANI Member</a>`;
+                }
+
+
+                resultsHtml += `
+                    <div class="${rankColor} p-4 rounded-lg flex flex-col shadow-sm">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full">
+                            <div class="mb-2 sm:mb-0">
+                                <span class="font-semibold text-lg">${i + 1}. ${cheapestTariffForSupplier.name}</span>
+                                ${evaniSupporterBadge}
+                                <p class="text-sm">Monthly Cost (including VAT): <span class="font-bold text-xl">£${cheapestTariffForSupplier.totalCost.toFixed(2)}</span></p>
+                                ${cheapestTariffForSupplier.additionalInfo ? `<p class="text-xs text-gray-600 sm:mt-1 italic">${cheapestTariffForSupplier.additionalInfo}</p>` : ''}
+                            </div>
+                            <span class="text-2xl font-bold mt-2 sm:mt-0 ml-auto mr-4">${medalHtml}</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <button onclick="toggleBreakdown(${i})"
+                                    class="px-4 py-2 bg-[#004E64] text-white text-sm rounded-lg hover:bg-[#003C4B] focus:outline-none focus:ring-2 focus:ring-[#004E64] focus:ring-opacity-50">
+                                Show Breakdown
+                            </button>
+                            ${supplierData.allTariffs.length > 1 ? `
+                                <button onclick="toggleSupplierTariffs(${i})"
+                                        class="px-4 py-2 bg-[#00A878] text-white text-sm rounded-lg hover:bg-[#008A60] focus:outline-none focus:ring-2 focus:ring-[#00A878] focus:ring-opacity-50">
+                                    Show All Equally Priced Tariffs from ${supplierData.supplierName}
+                                </button>
+                            ` : ''}
+                        </div>
+
+                        <div id="breakdown-${i}" class="hidden mt-4 pt-4 border-t border-gray-300 w-full">
+                            <p class="font-semibold text-gray-700 mb-2">Calculation Breakdown for ${cheapestTariffForSupplier.name}:</p>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                ${rateDisplay}
+                                <li>Monthly Standing Charge (30 days @ ${cheapestTariffForSupplier.standingCharge.toFixed(3)}p/day): <span class="font-medium">£${cheapestTariffForSupplier.standingChargeCost.toFixed(2)}</span></li>
+                                <li><strong>Total Monthly Cost (including VAT): <span class="font-bold">£${cheapestTariffForSupplier.totalCost.toFixed(2)}</span></strong></li>
+                            </ul>
+                        </div>
+
+                        <div id="all-tariffs-${i}" class="hidden mt-4 pt-4 border-t border-gray-300 w-full">
+                            <p class="font-semibold text-gray-700 mb-2">All Equally Priced Tariffs from ${supplierData.supplierName}:</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <!-- Filtered tariffs will be rendered here -->
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+
+            resultsHtml += `</div>`;
+            resultsDiv.innerHTML = resultsHtml;
+
+
+            // Optional: Scroll to results
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /**
+         * Toggles the visibility of the breakdown section for a specific provider.
+         * @param {number} index - The index of the provider in the displayed results (from topUniqueSuppliers array).
+         */
+        function toggleBreakdown(index) {
+            const breakdownDiv = document.getElementById(`breakdown-${index}`);
+            if (breakdownDiv) {
+                breakdownDiv.classList.toggle('hidden');
+                const button = event.currentTarget; // Get the clicked button
+                button.textContent = breakdownDiv.classList.contains('hidden') ? 'Show Breakdown' : 'Hide Breakdown';
+            }
+        }
+
+        /**
+         * Toggles the visibility of all tariffs for a specific supplier,
+         * showing only those with the same cheapest monthly cost.
+         * @param {number} index - The index of the supplier in the displayed results (from topUniqueSuppliers array).
+         */
+        function toggleSupplierTariffs(index) {
+            const allTariffsDiv = document.getElementById(`all-tariffs-${index}`);
+            if (allTariffsDiv) {
+                const supplierData = topUniqueSuppliers[index];
+                const cheapestCost = supplierData.cheapestTariff.totalCost;
+
+                // Filter tariffs to only include those with the exact same totalCost
+                const filteredTariffs = supplierData.allTariffs.filter(tariff =>
+                    tariff.totalCost.toFixed(2) === cheapestCost.toFixed(2) // Compare fixed-point numbers
+                );
+
+                const tariffsListHtml = filteredTariffs.map(tariff => {
+                    let rateInfo = '';
+                    if (tariff.type === "economy7") {
+                        // Ensure dayRate and nightRate are numbers before calling toFixed
+                        const dayRate = typeof tariff.dayRate === 'number' ? tariff.dayRate : 0;
+                        const nightRate = typeof tariff.nightRate === 'number' ? tariff.nightRate : 0;
+                        rateInfo = `Day Rate: ${dayRate.toFixed(3)}p/kWh, Night Rate: ${nightRate.toFixed(3)}p/kWh`;
+                    } else if (tariff.type === "standard") {
+                        // Ensure unitRatePencePerKWh is a number before calling toFixed
+                        const unitRate = typeof tariff.unitRatePencePerKWh === 'number' ? tariff.unitRatePencePerKWh : 0;
+                        rateInfo = `Unit Rate: ${unitRate.toFixed(3)}p/kWh`;
+                    }
+                    // Ensure standingCharge is a number before calling toFixed
+                    const standingCharge = typeof tariff.standingCharge === 'number' ? tariff.standingCharge : 0;
+                    return `
+                        <li class="p-2 border border-gray-200 rounded-md">
+                            <strong>${tariff.name}</strong><br>
+                            Monthly Cost (including VAT): £${tariff.totalCost.toFixed(2)}<br>
+                            ${rateInfo}<br>
+                            Standing Charge: ${standingCharge.toFixed(3)}p/day<br>
+                            ${tariff.additionalInfo ? `<em>${tariff.additionalInfo}</em>` : ''}
+                        </li>
+                    `;
+                }).join('');
+
+                allTariffsDiv.querySelector('ul').innerHTML = tariffsListHtml;
+                allTariffsDiv.classList.toggle('hidden');
+
+                const button = event.currentTarget; // Get the clicked button
+                button.textContent = allTariffsDiv.classList.contains('hidden') ? `Show All Equally Priced Tariffs from ${supplierData.supplierName}` : `Hide All Equally Priced Tariffs from ${supplierData.supplierName}`;
+            }
+        }
+
+        /**
+         * Shows the AI explanation modal.
+         */
+        function showAIExplanationModal() {
+            const modal = document.getElementById('aiExplanationModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        /**
+         * Hides the AI explanation modal.
+         */
+        function hideAIExplanationModal() {
+            const modal = document.getElementById('aiExplanationModal');
+            if (modal) {
+                modal.style.display = 'none';
+                const content = document.getElementById('aiExplanationContent');
+                if (content) content.innerHTML = ''; // Clear content
+            }
+        }
+
+        /**
+         * Shows the consumption info modal.
+         */
+        function showConsumptionInfoModal() {
+            const modal = document.getElementById('consumptionInfoModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        /**
+         * Hides the consumption info modal.
+         */
+        function hideConsumptionInfoModal() {
+            const modal = document.getElementById('consumptionInfoModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        /**
+         * Toggles the visibility of the EV info section.
+         * The content of this section now includes specific EV examples.
+         */
+        function toggleEVInfo() {
+            const evInfoSection = document.getElementById('evInfoSection');
+            const toggleButton = document.getElementById('toggleEVInfoBtn');
+            if (evInfoSection && toggleButton) {
+                evInfoSection.classList.toggle('hidden');
+                // The button text will remain "Need help estimating EV consumption?" or be changed to "Hide EV Examples"
+                // based on the visibility of the section.
+                if (evInfoSection.classList.contains('hidden')) {
+                    toggleButton.textContent = "Need help estimating EV consumption?";
+                } else {
+                    toggleButton.textContent = "Hide EV Examples";
+                }
+            }
+        }
+
+        /**
+         * Sets the night consumption input field based on EV efficiency and monthly driving distance.
+         * @param {number} efficiencyMilesPerKWh - The efficiency of the EV in miles per kWh.
+         */
+        function estimateMonthlyEVConsumption(efficiencyMilesPerKWh) {
+            const nightConsumptionInput = document.getElementById('nightConsumption');
+            const monthlyDrivingDistanceInput = document.getElementById('monthlyDrivingDistance');
+
+            const monthlyDrivingDistance = parseFloat(monthlyDrivingDistanceInput.value);
+
+            if (isNaN(monthlyDrivingDistance) || monthlyDrivingDistance <= 0) {
+                showCustomAlert("Input Error", "Please enter a valid positive number for your monthly driving distance.");
+                return;
+            }
+
+            // Corrected calculation: Monthly kWh = Monthly Driving Distance / Efficiency (miles/kWh)
+            const estimatedMonthlyKWh = monthlyDrivingDistance / efficiencyMilesPerKWh;
+
+            if (nightConsumptionInput) {
+                nightConsumptionInput.value = estimatedMonthlyKWh.toFixed(0); // Round to nearest whole number
+            }
+
+            // Hide the EV info section after setting the value
+            const evInfoSection = document.getElementById('evInfoSection');
+            const toggleButton = document.getElementById('toggleEVInfoBtn');
+            if (evInfoSection) {
+                evInfoSection.classList.add('hidden');
+                if (toggleButton) {
+                    toggleButton.textContent = "Need help estimating EV consumption?";
+                }
+            }
+        }
+
+        /**
+         * Uses the Gemini API to explain a tariff in simple terms.
+         * @param {object} tariffDetails - The tariff object to explain.
+         */
+        async function explainTariffWithAI(tariffDetails) {
+            showAIExplanationModal();
+            const aiExplanationContent = document.getElementById('aiExplanationContent');
+            if (!aiExplanationContent) {
+                console.error("Error: aiExplanationContent div not found for AI explanation.");
+                return;
+            }
+            aiExplanationContent.innerHTML = '<div class="loading-spinner"></div><p class="text-center mt-4">Generating explanation...</p>';
+            const aiExplanationTitle = document.getElementById('aiExplanationTitle');
+            if (aiExplanationTitle) aiExplanationTitle.textContent = `Explanation for: ${tariffDetails.name}`;
+
+            let prompt = `Explain the following electricity tariff in simple terms for a homeowner, highlighting its main features, benefits, or any specific conditions. Format the response using HTML paragraphs (<p>) and unordered lists (<ul>, <li>) for readability.
+
+            Tariff Name: ${tariffDetails.name}
+            Supplier: ${tariffDetails.supplier}
+            `;
+
+            if (tariffDetails.type === "economy7") {
+                prompt += `Day Rate: ${tariffDetails.dayRate.toFixed(3)}p/kWh
+                           Night Rate: ${tariffDetails.nightRate.toFixed(3)}p/kWh
+                           Standing Charge: ${tariffDetails.standingCharge.toFixed(3)}p/day
+                           Additional Information: ${tariffDetails.additionalInfo}`;
+            } else if (tariffDetails.type === "standard") {
+                // For standard tariffs, use unitRatePencePerKWh from the original tariff object
+                const originalStandardTariff = standardProviders.find(p => p.name === tariffDetails.name && p.supplier === tariffDetails.supplier);
+                const unitRate = originalStandardTariff ? originalStandardTariff.unitRatePencePerKWh : 0;
+                prompt += `Unit Rate: ${unitRate.toFixed(3)}p/kWh
+                           Standing Charge: ${tariffDetails.standingCharge.toFixed(3)}p/day
+                           Additional Information: ${tariffDetails.additionalInfo}`;
+            }
+
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas will provide this at runtime
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    // Directly insert the HTML generated by the LLM
+                    aiExplanationContent.innerHTML = text;
+                } else {
+                    aiExplanationContent.innerHTML = '<p class="text-red-500">Error: Could not generate explanation. Please try again.</p>';
+                    console.error("Gemini API response structure unexpected:", result);
+                }
+            } catch (error) {
+                aiExplanationContent.innerHTML = `<p class="text-red-500">Error: Failed to connect to the AI service. (${error.message})</p>`;
+                console.error("Error calling Gemini API:", error);
+            }
+        }
+
+        // Global variable to store topUniqueSuppliers for toggleSupplierTariffs to access
+        let topUniqueSuppliers = [];
+
+        // Event Listeners for modals and initial setup
+        window.onload = async () => { // Changed to async to await loadTariffData
+            // Check for the main container before proceeding
+            const mainContainer = document.querySelector('.container');
+            if (!mainContainer) {
+                console.error("Error: Main calculator container (.container) not found. Script cannot initialize.");
+                return; // Stop execution if the main container isn't there
+            }
+
+            // Load tariff data first
+            await loadTariffData();
+
+            // Explicitly hide modals on load to prevent unexpected display
+            const consumptionInfoModal = document.getElementById('consumptionInfoModal');
+            if (consumptionInfoModal) {
+                consumptionInfoModal.style.display = 'none';
+            } else {
+                console.error("Error: consumptionInfoModal not found on window.onload.");
+            }
+
+            const aiExplanationModal = document.getElementById('aiExplanationModal');
+            if (aiExplanationModal) {
+                aiExplanationModal.style.display = 'none';
+            } else {
+                console.error("Error: aiExplanationModal not found on window.onload.");
+            }
+
+            const customAlertModal = document.getElementById('customAlertModal');
+            if (customAlertModal) {
+                customAlertModal.style.display = 'none';
+            } else {
+                console.error("Error: customAlertModal not found on window.onload.");
+            }
+
+            // Attach event listeners to the info buttons
+            const dayInfoBtn = document.getElementById('dayConsumptionInfoBtn');
+            if (dayInfoBtn) {
+                dayInfoBtn.addEventListener('click', showConsumptionInfoModal);
+            } else {
+                console.error("Error: dayConsumptionInfoBtn not found. Cannot attach listener.");
+            }
+
+            const nightInfoBtn = document.getElementById('nightConsumptionInfoBtn');
+            if (nightInfoBtn) {
+                nightInfoBtn.addEventListener('click', showConsumptionInfoModal);
+            } else {
+                console.error("Error: nightConsumptionInfoBtn not found. Cannot attach listener.");
+            }
+            
+            const closeConsumptionInfoModalBtn = document.getElementById('closeConsumptionInfoModalBtn');
+            if (closeConsumptionInfoModalBtn) {
+                closeConsumptionInfoModalBtn.addEventListener('click', hideConsumptionInfoModal);
+            } else {
+                console.error("Error: closeConsumptionInfoModalBtn not found. Cannot attach listener.");
+            }
+
+            // Attach event listener for the main calculation button
+            const calculateBtn = document.getElementById('calculateButton');
+            if (calculateBtn) {
+                calculateBtn.addEventListener('click', calculateCheapest);
+            } else {
+                console.error("Error: calculateButton not found. Cannot attach listener.");
+            }
+
+            // Attach event listener for the new EV info toggle button
+            const toggleEVInfoButton = document.getElementById('toggleEVInfoBtn');
+            if (toggleEVInfoButton) {
+                toggleEVInfoButton.addEventListener('click', toggleEVInfo);
+            } else {
+                console.error("Error: toggleEVInfoBtn not found. Cannot attach listener.");
+            }
+
+            // No initial calculation on load. User must click "Calculate"
+            // try {
+            //     calculateCheapest();
+            // } catch (error) {
+            //     console.error("Error during initial calculateCheapest call:", error);
+            // }
+        };
+
+    </script>
+</body>
+</html>
