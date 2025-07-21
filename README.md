@@ -6,7 +6,8 @@ Created by downloading https://www.consumercouncil.org.uk/consumers/help-consume
 and https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas/switching-electricity-or-gas-supplier/electricity-price-comparison-table
 (pdf versions)
 
-Google Geminii
-Cmd: can you take the data from the two pdf's format into a json file, from the Electricity Price Comparison Table add a Night Unit rate of zero to match the Economy 7 Price Comparison Table data. Remove the annual cost from Electricity Price Comparison Table can you sort the data so that all suppliers similar suppliers are listed below each other?
+**Google Gemini:**
+convert to json can you add both pdf's to the one json, i know the fields arent the same, to help with that use the data fields in Economy 7 Price Comparison Table pdf as the master, from Electricity Price Comparison Table pdf remove the column annual cost, put zero in the column for NIGHT UNIT RATE PENCE PER UNIT/KWH and change the field PRICE IN PENCE PER UNIT/KWH to match be in DAY UNIT RATE PENCE PER UNIT/KWH.  Also remove the p beside all charges
 
 Copy and paste into 
+Created by Steven Law
