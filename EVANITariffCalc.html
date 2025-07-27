@@ -96,9 +96,11 @@
                 For now, a publicly accessible URL has been used for the logo to ensure visibility.
             -->
             <img src="https://evani.uk/wp-content/uploads/2021/02/evani-logo3.png" alt="EVA NI Logo" class="w-24 h-auto mb-4">
-            <h1 class="text-3xl font-bold text-center text-gray-800">Domestic Electricity Cost Calculator – Standard & Economy 7</h1>
+            <h1 class="text-3xl font-bold text-center text-gray-800">Electricity Cost Calculator</h1>
+            <h2 class="text-2xl font-bold text-center text-gray-800">Domestic - Standard & Economy 7</h2>
         </div>
-        <p class="text-gray-600 text-center mb-8">Enter your monthly day and night electricity consumption (in kWh) to find the cheapest providers in Northern Ireland, generally it is cheaper to charge an EV during the night.</p>
+        <p class="text-gray-600 text-center mb-8">Enter your monthly electricity use for both day and night (in kWh) to compare the cheapest suppliers in Northern Ireland.
+    </br></br><i>Tip: If you charge an EV at home, night rates are usually cheaper.</i> </p>
 
         <button id="toggleEVInfoBtn"
                 class="w-full bg-gray-200 text-gray-700 p-2 rounded-lg font-bold text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 shadow-sm mb-6">
@@ -106,10 +108,11 @@
         </button>
 
         <div id="evInfoSection" class="hidden bg-blue-50 p-4 rounded-lg mb-8 text-gray-700">
-            <p class="font-semibold mb-4 text-center">Estimate your monthly night consumption based on EV examples:</p>
+            <p class="font-semibold mb-4 text-center">Estimate your monthly night usage for EV charging:</p>
             <div class="mb-4">
                 <label for="monthlyDrivingDistance" class="block text-gray-700 text-sm font-semibold mb-2">
-                    Enter your estimated monthly driving distance (miles):
+                    
+Enter your average monthly driving distance (in miles), and we’ll calculate how many night-time electricity units (kWh) you’ll likely use.
                 </label>
                 <input type="number" id="monthlyDrivingDistance" placeholder="e.g., 500"
                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#004E64] focus:border-transparent text-gray-800" min="0">
@@ -211,7 +214,7 @@
 
         <!-- New line with link to Consumer Council NI -->
         <div class="text-center mt-4 text-sm text-gray-500">
-            Data from <a href="https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas/switching-electricity-or-gas-supplier/economy-7" target="_blank" rel="noopener noreferrer" class="text-[#004E64] hover:underline">Consumer Council NI</a>
+            Data from <a href="https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas" target="_blank" rel="noopener noreferrer" class="text-[#004E64] hover:underline">Consumer Council NI</a>
         </div>
         <!-- Version information moved to bottom right -->
         <div class="text-right text-xs text-gray-500 mt-2">v4.0 (27 July 25)</div>
