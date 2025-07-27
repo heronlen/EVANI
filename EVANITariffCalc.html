@@ -286,7 +286,7 @@
          */
         async function loadTariffData() {
             // Updated GitHub Raw URL to the new source
-            const githubRawUrl = 'https://raw.githubusercontent.com/heronlen/EVANI/refs/heads/main/full_electricity_tariffs_comparison_complete.json';
+            const githubRawUrl = 'https://raw.githubusercontent.com/heronlen/EVANI/main/full_electricity_tariffs_comparison_complete.json';
             try {
                 const response = await fetch(githubRawUrl);
                 if (!response.ok) {
