@@ -57,7 +57,8 @@
             </div>
             <div>
               <label for="nightConsumption" class="block text-gray-700 text-sm font-semibold mb-2">Night consumption (kWh)</label>
-              <input type="number" id="nightConsumption" placeholder="e.g., 300" value="0" min="0" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent text-gray-800" />
+              <input type="number" id="nightConsumption" placeholder="e.g., 300" min="0" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent text-gray-800" />
+              <p class="text-xs text-gray-500 mt-1">Leave blank if you don’t use night rate.</p>
             </div>
           </div>
         </div>
@@ -119,7 +120,7 @@
   </div>
 
   <script>
-    const CONFIG={DATA_URL:'https://raw.githubusercontent.com/heronlen/EVANI/main/full_electricity_tariffs_comparison_complete.json',SOURCE_PRICES_INCLUDE_VAT:true,VERSION:'5.01',UPDATED_ISO:'2025-08-20'};
+    const CONFIG={DATA_URL:'https://raw.githubusercontent.com/heronlen/EVANI/main/full_electricity_tariffs_comparison_complete.json',SOURCE_PRICES_INCLUDE_VAT:true,VERSION:'5.02',UPDATED_ISO:'2025-08-20'};
     let providers=[],economy7Providers=[],standardProviders=[],topUniqueSuppliers=[];
 
     function parsePrice(v){ if(v==null) return 0; if(typeof v==='number') return v; const n=parseFloat((v+'').replace(/[^\d.\-]/g,'')); return isNaN(n)?0:n; }
@@ -253,9 +254,9 @@
     }
 
     function calculateCheapest(){
-      const day=parseFloat(document.getElementById('dayConsumption').value);
-      const night=parseFloat(document.getElementById('nightConsumption').value);
-      if(isNaN(day)||isNaN(night)||day<0||night<0){ showCustomAlert('Input error','Enter valid positive numbers.'); return; }
+      const day = parseFloat(document.getElementById('dayConsumption').value) || 0;
+      const night = parseFloat(document.getElementById('nightConsumption').value) || 0; // blank treated as 0
+      if(day < 0 || night < 0){ showCustomAlert('Input error','Enter valid positive numbers.'); return; }
       if(providers.length===0){ showCustomAlert('Data not loaded','Tariff data unavailable yet.'); return; }
       renderResults(day,night);
     }
@@ -271,6 +272,8 @@
       document.getElementById('calculateButton').addEventListener('click',calculateCheapest);
       document.getElementById('customAlertModal').classList.add('hidden');
       const v=document.getElementById('versionStamp'); v.textContent=`v${CONFIG.VERSION} (${new Date(CONFIG.UPDATED_ISO).toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'2-digit'})})`;
+      // Visually blank night input on load
+      const nightEl=document.getElementById('nightConsumption'); if(nightEl) nightEl.value='';
       await loadTariffData();
     };
   </script>
