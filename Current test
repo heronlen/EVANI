@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Home Charging Electricity Cost Calculator</title>
+
+  <!-- Icons -->
+  <link rel="icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" sizes="32x32" />
+  <link rel="icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" />
+  <meta name="msapplication-TileImage" content="https://evani.uk/wp-content/uploads/2021/02/favicon.png" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root { --brand: #004E64; --brand-dark: #003C4B; --accent: #00A878; --accent-dark: #008A60; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; background-color: #f5f7fb; }
+    .container { max-width: 1000px; }
+    button { transition: all 0.2s ease-in-out; }
+    button:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type="number"] { -moz-appearance: textfield; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 9999px; }
+    @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-4px); } 40% { transform: translateX(4px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(3px); } }
+    .animate-shake { animation: shake 0.4s ease-in-out; }
+    @media (prefers-reduced-motion: reduce){ .animate-shake { animation: none; } }
+  </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+  <div class="container bg-white p-8 rounded-xl shadow-lg w-full">
+    <!-- Header -->
+    <div class="flex flex-col items-center mb-6">
+      <img src="https://evani.uk/wp-content/uploads/2021/02/evani-logo3.png" alt="EVA NI Logo" class="w-24 h-auto mb-4" />
+      <h1 class="text-3xl font-bold text-center text-gray-900">EV Home Charging Electricity Cost Calculator</h1>
+      <h2 class="text-xl md:text-2xl font-semibold text-center text-gray-700">Compare Standard &amp; Economy 7 tariffs in Northern Ireland</h2>
+    </div>
+
+    <!-- Intro -->
+    <p class="text-gray-600 text-center mb-8">
+      Enter your monthly electricity use (in kWh) to compare suppliers in Northern Ireland.<br />
+      For <b>EV drivers</b>, charging at night on <b>Economy 7</b> is usually cheaper.
+    </p>
+
+    <!-- Step 1: Inputs + EV Helper side-by-side -->
+    <div class="mb-6">
+      <h3 class="text-lg font-bold text-gray-800 mb-3">Step 1: Enter usage</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Inputs card -->
+        <div class="border rounded-xl p-4 bg-gray-50">
+          <div class="space-y-4">
+            <div>
+              <label for="dayConsumption" class="block text-gray-700 text-sm font-semibold mb-2">Day consumption (kWh)</label>
+              <input type="number" id="dayConsumption" placeholder="e.g., 200" min="0" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent text-gray-800" />
+            </div>
+            <div>
+              <label for="nightConsumption" class="block text-gray-700 text-sm font-semibold mb-2">Night consumption (kWh)</label>
+              <input type="number" id="nightConsumption" placeholder="e.g., 300" value="0" min="0" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent text-gray-800" />
+            </div>
+          </div>
+        </div>
+
+        <!-- EV Helper card -->
+        <div class="border rounded-xl p-4 bg-blue-50">
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="font-semibold text-gray-800">EV charging estimator</h4>
+            <span class="badge bg-white text-gray-700 border">Optional</span>
+          </div>
+          <p class="text-sm text-gray-700 mb-3">Estimate your <b>night</b> usage from miles driven.</p>
+
+          <label for="monthlyDrivingDistance" class="block text-gray-700 text-sm font-semibold mb-2">Monthly driving (miles)</label>
+          <input type="number" id="monthlyDrivingDistance" placeholder="e.g., 500" min="0" class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent text-gray-800" />
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <button type="button" onclick="estimateMonthlyEVConsumption(4.7)" class="w-full bg-[var(--accent)] text-white p-2 rounded-lg text-sm hover:bg-[var(--accent-dark)]">Compact<br/><span class="opacity-80">4.7 mi/kWh</span></button>
+            <button type="button" onclick="estimateMonthlyEVConsumption(4.1)" class="w-full bg-[var(--accent)] text-white p-2 rounded-lg text-sm hover:bg-[var(--accent-dark)]">Medium<br/><span class="opacity-80">4.1 mi/kWh</span></button>
+            <button type="button" onclick="estimateMonthlyEVConsumption(3.6)" class="w-full bg-[var(--accent)] text-white p-2 rounded-lg text-sm hover:bg-[var(--accent-dark)]">SUV<br/><span class="opacity-80">3.6 mi/kWh</span></button>
+            <button type="button" onclick="estimateMonthlyEVConsumption(3.9)" class="w-full bg-[var(--accent)] text-white p-2 rounded-lg text-sm hover:bg-[var(--accent-dark)]">Large Saloon<br/><span class="opacity-80">3.9 mi/kWh</span></button>
+          </div>
+          <p class="mt-3 text-xs text-gray-600">We'll set your <b>night</b> kWh to the estimate (miles ÷ efficiency).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Calculate -->
+    <div class="mb-6">
+      <h3 class="text-lg font-bold text-gray-800 mb-3">Step 2: Calculate</h3>
+      <button id="calculateButton" type="button" class="w-full bg-[var(--brand)] text-white p-3 rounded-lg font-bold text-lg hover:bg-[var(--brand-dark)]">Calculate cheapest providers</button>
+    </div>
+
+    <!-- Results -->
+    <div class="mb-2">
+      <h3 class="text-lg font-bold text-gray-800 mb-3">Results</h3>
+      <div id="results" class="border rounded-xl p-4 bg-white">
+        <div class="text-gray-500 text-sm">Enter your usage and press Calculate to see the top suppliers.</div>
+      </div>
+    </div>
+
+    <!-- Footer links -->
+    <div class="text-center mt-8"><a href="https://evani.uk/join/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--accent)] text-white p-3 rounded-lg font-bold hover:bg-[var(--accent-dark)]">JOIN THE EV ASSOCIATION NI (IT'S FREE)</a></div>
+    <div class="text-center mt-4 text-sm text-gray-500">Data from <a href="https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas" target="_blank" rel="noopener noreferrer" class="text-[var(--brand)] hover:underline">Consumer Council NI</a></div>
+    <div id="versionStamp" class="text-right text-xs text-gray-500 mt-2"></div>
+  </div>
+
+  <!-- Custom Alert Modal -->
+  <div id="customAlertModal" class="fixed inset-0 hidden justify-center items-center bg-black/70 z-50" role="dialog" aria-modal="true" aria-labelledby="customAlertTitle">
+    <div class="modal-content bg-red-50 border-2 border-red-400 text-red-800 shadow-2xl max-w-md w-[90%] animate-shake">
+      <div class="flex items-center gap-3 mb-3">
+        <span aria-hidden="true">⚠️</span>
+        <h3 id="customAlertTitle" class="text-lg font-bold">Alert</h3>
+      </div>
+      <p id="customAlertMessage" class="text-base"></p>
+      <div class="text-center mt-6">
+        <button id="customAlertOk" type="button" onclick="hideCustomAlert()" class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG={DATA_URL:'https://raw.githubusercontent.com/heronlen/EVANI/main/full_electricity_tariffs_comparison_complete.json',SOURCE_PRICES_INCLUDE_VAT:true,VERSION:'5.01',UPDATED_ISO:'2025-08-20'};
+    let providers=[],economy7Providers=[],standardProviders=[],topUniqueSuppliers=[];
+
+    function parsePrice(v){ if(v==null) return 0; if(typeof v==='number') return v; const n=parseFloat((v+'').replace(/[^\d.\-]/g,'')); return isNaN(n)?0:n; }
+    function showCustomAlert(t,m){
+      const modal=document.getElementById('customAlertModal');
+      const titleEl=document.getElementById('customAlertTitle');
+      const msgEl=document.getElementById('customAlertMessage');
+      const okBtn=document.getElementById('customAlertOk');
+      if(titleEl) titleEl.textContent=t||'Alert';
+      if(msgEl) msgEl.textContent=m||'';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+      setTimeout(()=>{ okBtn && okBtn.focus(); }, 0);
+    }
+    function hideCustomAlert(){
+      const modal=document.getElementById('customAlertModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    async function loadTariffData(){
+      try{
+        const r=await fetch(CONFIG.DATA_URL,{cache:'no-store'});
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        const d=await r.json();
+        economy7Providers=[]; standardProviders=[];
+        d.forEach(it=>{
+          const sc=parsePrice(it['STANDING CHARGE PENCE PER DAY']);
+          const day=parsePrice(it['DAY UNIT RATE PENCE PER UNIT/KWH']);
+          const night=parsePrice(it['NIGHT UNIT RATE PENCE PER UNIT/KWH']);
+          const t={name:it['TARIFF NAME']||'N/A',supplier:it['SUPPLIER']||'N/A',standingChargePencePerDay:sc};
+          if(night>0){ t.type='economy7'; t.dayRatePencePerKWh=day; t.nightRatePencePerKWh=night; economy7Providers.push(t);} else { t.type='standard'; t.unitRatePencePerKWh=day; standardProviders.push(t);} });
+        providers=[...economy7Providers,...standardProviders];
+      }catch(e){ console.error(e); showCustomAlert('Data Load Error','Failed to load tariff data.'); }
+    }
+
+    function daysInCurrentMonth(){ const n=new Date(); return new Date(n.getFullYear(), n.getMonth()+1, 0).getDate(); }
+
+    function calculateTariffCost(t,day,night){
+      let d=0,nc=0,total=0; let dRate=0, nRate=0;
+      if(t.type==='economy7'){ dRate=+t.dayRatePencePerKWh||0; nRate=+t.nightRatePencePerKWh||0; d=day*dRate; nc=night*nRate; total=d+nc; }
+      else { dRate=+t.unitRatePencePerKWh||0; const k=day+night; d=k*dRate; total=d; }
+      const sc=(+t.standingChargePencePerDay||0)*daysInCurrentMonth(); total+=sc;
+      return { totalCost:+(total/100).toFixed(2), dayCost:+(d/100).toFixed(2), nightCost:+(nc/100).toFixed(2), standing:+(sc/100).toFixed(2), name:t.name, supplier:t.supplier, type:t.type, dRate:dRate, nRate:nRate, scPpd:+t.standingChargePencePerDay||0 };
+    }
+
+    function renderResults(day, night){
+      const results=document.getElementById('results');
+      if(providers.length===0){ results.innerHTML='<div class="text-red-600">No tariff data loaded.</div>'; return; }
+
+      const all=providers.map(p=>calculateTariffCost(p,day,night));
+      // group by supplier, take cheapest
+      const bySup={};
+      for(const t of all){ if(!bySup[t.supplier] || t.totalCost<bySup[t.supplier].cheapest.totalCost){ bySup[t.supplier]={cheapest:t, all:[t]}; } else { bySup[t.supplier].all.push(t); } }
+      const list=Object.values(bySup).map(x=>x.cheapest).sort((a,b)=>a.totalCost-b.totalCost);
+
+      if(list.length===0){ results.innerHTML='<div class="text-gray-600">Nothing to show.</div>'; return; }
+
+      const top=list.slice(0,3);
+      const second=top[1]?.totalCost ?? top[0].totalCost;
+      const savingVs2 = Math.max(0, (second - top[0].totalCost)).toFixed(2);
+
+      let html=`<div class='mb-3 text-sm text-gray-600'>Top results based on your inputs. You save <b>£${savingVs2}</b> vs #2.</div>`;
+      html += `<div class='grid grid-cols-1 md:grid-cols-3 gap-4'>`;
+
+      const medal=['🥇','🥈','🥉'];
+      top.forEach((t,i)=>{
+        const headerBg = i===0 ? 'bg-emerald-50' : i===1 ? 'bg-sky-50' : 'bg-slate-50';
+        const border = i===0 ? 'border-emerald-300' : i===1 ? 'border-sky-300' : 'border-slate-300';
+        const rateBlock = t.type==='economy7'
+          ? `<div class='text-xs text-gray-600'>Day: ${t.dRate.toFixed(3)}p | Night: ${t.nRate.toFixed(3)}p</div>`
+          : `<div class='text-xs text-gray-600'>Unit rate: ${t.dRate.toFixed(3)}p</div>`;
+        html += `
+        <div class='border ${border} rounded-lg overflow-hidden shadow-sm'>
+          <div class='${headerBg} px-4 py-3 flex items-center justify-between'>
+            <div class='font-semibold text-gray-800'>${medal[i]} ${t.supplier}</div>
+            <div class='text-right'>
+              <div class='text-xs uppercase tracking-wide text-gray-500'>Est. monthly</div>
+              <div class='text-2xl font-bold text-gray-900'>£${t.totalCost.toFixed(2)}</div>
+            </div>
+          </div>
+          <div class='p-4 space-y-1'>
+            ${rateBlock}
+            <div class='text-xs text-gray-600'>Standing charge: ${t.scPpd.toFixed(3)}p/day (~£${t.standing.toFixed(2)}/mo)</div>
+            <div class='text-xs text-gray-500'>Based on ${day} kWh day & ${night} kWh night.</div>
+          </div>
+        </div>`;
+      });
+      html += `</div>`;
+
+      // Add full table toggle
+      html += `
+        <div class='mt-6'>
+          <button type='button' id='toggleFullTable' class='px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm'>Show full table</button>
+          <div id='fullTable' class='hidden mt-3 overflow-x-auto'>
+            <table class='min-w-full text-sm'>
+              <thead>
+                <tr class='text-left text-gray-600 border-b'>
+                  <th class='py-2 pr-4'>Supplier</th>
+                  <th class='py-2 pr-4'>Tariff Type</th>
+                  <th class='py-2 pr-4'>Rate(s)</th>
+                  <th class='py-2 pr-4'>Standing (p/day)</th>
+                  <th class='py-2 pr-4'>Est. Monthly (£)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${list.map(t=>{
+                  const rate = t.type==='economy7' ? `D ${t.dRate.toFixed(3)}p / N ${t.nRate.toFixed(3)}p` : `${t.dRate.toFixed(3)}p`;
+                  return `<tr class='border-b'>
+                    <td class='py-2 pr-4'>${t.supplier}</td>
+                    <td class='py-2 pr-4 capitalize'>${t.type}</td>
+                    <td class='py-2 pr-4'>${rate}</td>
+                    <td class='py-2 pr-4'>${t.scPpd.toFixed(3)}</td>
+                    <td class='py-2 pr-4'>£${t.totalCost.toFixed(2)}</td>
+                  </tr>`;}).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+
+      results.innerHTML = html;
+      document.getElementById('toggleFullTable').addEventListener('click',()=>{
+        const ft=document.getElementById('fullTable');
+        const hidden=ft.classList.contains('hidden');
+        ft.classList.toggle('hidden');
+        document.getElementById('toggleFullTable').textContent = hidden ? 'Hide full table' : 'Show full table';
+      });
+      results.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function calculateCheapest(){
+      const day=parseFloat(document.getElementById('dayConsumption').value);
+      const night=parseFloat(document.getElementById('nightConsumption').value);
+      if(isNaN(day)||isNaN(night)||day<0||night<0){ showCustomAlert('Input error','Enter valid positive numbers.'); return; }
+      if(providers.length===0){ showCustomAlert('Data not loaded','Tariff data unavailable yet.'); return; }
+      renderResults(day,night);
+    }
+
+    function estimateMonthlyEVConsumption(eff){
+      const miles=parseFloat(document.getElementById('monthlyDrivingDistance').value)||0;
+      if(miles<=0){ showCustomAlert('Input error','Enter your monthly miles.'); return; }
+      const kwh = miles/eff; // miles ÷ (miles per kWh)
+      document.getElementById('nightConsumption').value = Math.round(kwh);
+    }
+
+    window.onload=async()=>{
+      document.getElementById('calculateButton').addEventListener('click',calculateCheapest);
+      document.getElementById('customAlertModal').classList.add('hidden');
+      const v=document.getElementById('versionStamp'); v.textContent=`v${CONFIG.VERSION} (${new Date(CONFIG.UPDATED_ISO).toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'2-digit'})})`;
+      await loadTariffData();
+    };
+  </script>
+</body>
+</html>
