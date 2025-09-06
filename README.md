@@ -6,9 +6,6 @@ Created by downloading https://www.consumercouncil.org.uk/consumers/help-consume
 and https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas/switching-electricity-or-gas-supplier/electricity-price-comparison-table
 (pdf versions)
 
-**Google Gemini:**
-convert to json can you add both pdf's to the one json, i know the fields arent the same, to help with that use the data fields in Economy 7 Price Comparison Table pdf as the master, from Electricity Price Comparison Table pdf remove the column annual cost, put zero in the column for NIGHT UNIT RATE PENCE PER UNIT/KWH and change the field PRICE IN PENCE PER UNIT/KWH to match be in DAY UNIT RATE PENCE PER UNIT/KWH.  Also remove the p beside all charges
-
 Copy and paste results into full_electricity_tariffs_comparison_complete.json (do not change file name - the calcualator reads this file) - before overwriting copy the results into old_tariffs.json.
 
 HTML code is as per EVANITariffCalc.html file
