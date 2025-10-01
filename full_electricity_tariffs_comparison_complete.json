@@ -135,51 +135,6 @@
     "ADDITIONAL INFORMATION": "No Fixed Term Contract."
   },
   {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay Economy 7",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.254",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.144",
-    "STANDING CHARGE PENCE PER DAY": "14.130",
-    "ADDITIONAL INFORMATION": "No contract"
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay Economy 7",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.254",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.144",
-    "STANDING CHARGE PENCE PER DAY": "14.130",
-    "ADDITIONAL INFORMATION": "No contract"
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay Economy 7",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.254",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.144",
-    "STANDING CHARGE PENCE PER DAY": "14.130",
-    "ADDITIONAL INFORMATION": "No Contract."
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay Economy 7",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.254",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.144",
-    "STANDING CHARGE PENCE PER DAY": "14.130",
-    "ADDITIONAL INFORMATION": "No contract"
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Keypad Economy 7",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.254",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.144",
-    "STANDING CHARGE PENCE PER DAY": "14.130",
-    "ADDITIONAL INFORMATION": "No Contract."
-  },
-  {
     "SUPPLIER": "Power NI",
     "TARIFF NAME": "Monthly Direct Debit with Energy Online (E7)",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
@@ -690,42 +645,6 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "26.024",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "12.363",
-    "ADDITIONAL INFORMATION": "No contract.\nNo exit fee."
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.540",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "No contract.\nNo exit fee."
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Keypad",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.540",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "No contract\n• No Exit Fee"
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.540",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "No contract.\nNo exit fee."
-  },
-  {
-    "SUPPLIER": "Electric Ireland",
-    "TARIFF NAME": "Simpler Living Standard Billpay",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.540",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "No contract.\nNo exit fee."
   },
   {
