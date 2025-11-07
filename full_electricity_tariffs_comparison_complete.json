@@ -39,9 +39,9 @@
     "SUPPLIER": "Budget Energy",
     "TARIFF NAME": "Bill Pay Economy 7",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.519",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.865",
-    "STANDING CHARGE PENCE PER DAY": "22.559",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "41.262",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.441",
+    "STANDING CHARGE PENCE PER DAY": "24.036",
     "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
   },
   {
@@ -480,7 +480,7 @@
     "SUPPLIER": "Power NI",
     "TARIFF NAME": "Energy Online Direct Debit - Quarterly",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "29.060",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "29.520",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of £46 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
@@ -498,7 +498,7 @@
     "SUPPLIER": "Power NI",
     "TARIFF NAME": "Direct Debit - Quarterly",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "29.680",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "30.140",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of £26 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
@@ -710,202 +710,39 @@
     "STANDING CHARGE PENCE PER DAY": "16.670",
     "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
   },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24h",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24h",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24h",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24h",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24-Hour Round the Clock",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "26.935",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24-Hour Round the Clock",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "26.935",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24-Hour Round the Clock",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "26.935",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay 24-Hour Round the Clock",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "26.935",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff",
-    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487",
-    "STANDING CHARGE PENCE PER DAY": "10.219",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad 24h",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad 24-Hour Round the Clock",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "26.935",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad Economy 7",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad Economy 7 Saver/Twilight Tariff",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "1 Year Fixed Term"
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad Powershift (Normal)",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  },
-  {
-    "SUPPLIER": "Click Energy",
-    "TARIFF NAME": "Keypad Powershift (Low)",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "12.795",
-    "ADDITIONAL INFORMATION": "No fixed term contract."
-  }
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24h", "PAYMENT & BILLING METHOD": "Direct Debit e-bill",       "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24h", "PAYMENT & BILLING METHOD": "Direct Debit postal bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24h", "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24h", "PAYMENT & BILLING METHOD": "Pay on receipt of bill",   "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Round the Clock", "PAYMENT & BILLING METHOD": "Direct Debit e-bill",       "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Round the Clock", "PAYMENT & BILLING METHOD": "Direct Debit postal bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Round the Clock", "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Round the Clock", "PAYMENT & BILLING METHOD": "Pay on receipt of bill",   "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Fixed Saver", "PAYMENT & BILLING METHOD": "Direct Debit e-bill",       "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Fixed Saver", "PAYMENT & BILLING METHOD": "Direct Debit postal bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Fixed Saver", "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay 24-Hour Fixed Saver", "PAYMENT & BILLING METHOD": "Pay on receipt of bill",   "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7", "PAYMENT & BILLING METHOD": "Direct Debit e-bill",       "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7", "PAYMENT & BILLING METHOD": "Direct Debit postal bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7", "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7", "PAYMENT & BILLING METHOD": "Pay on receipt of bill",   "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff", "PAYMENT & BILLING METHOD": "Direct Debit e-bill",       "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff", "PAYMENT & BILLING METHOD": "Direct Debit postal bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff", "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill", "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Bill Pay Economy 7 Saver / Twilight Tariff", "PAYMENT & BILLING METHOD": "Pay on receipt of bill",   "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487", "STANDING CHARGE PENCE PER DAY": "10.219", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad 24h",                     "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad 24-Hour Round the Clock", "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad 24-Hour Fixed Saver",     "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "24.990", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",      "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad Economy 7",                   "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "36.320", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.577", "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad Economy 7 Saver/Twilight Tariff", "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "31.235", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "14.487", "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "1 Year Fixed Term" },
+
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad Powershift (Normal)", "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "No Fixed Term Contract." },
+  { "SUPPLIER": "Click Energy", "TARIFF NAME": "Keypad Powershift (Low)",    "PAYMENT & BILLING METHOD": "Prepayment meter", "DAY UNIT RATE PENCE PER UNIT/KWH": "35.441", "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0", "STANDING CHARGE PENCE PER DAY": "12.795", "ADDITIONAL INFORMATION": "No Fixed Term Contract." }
 ]
