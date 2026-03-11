@@ -46,7 +46,7 @@
   },
   {
     "SUPPLIER": "Budget Energy",
-    "TARIFF NAME": "Budget Energy Keypad 20% Discount Tariff & £80 Energy Credit",
+    "TARIFF NAME": "Budget Energy Keypad 20% Discount Tariff & \u00a380 Energy Credit",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "30.078",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
@@ -64,12 +64,12 @@
   },
   {
     "SUPPLIER": "Budget Energy",
-    "TARIFF NAME": "Budget Energy's Keypad Promo 1 Economy 7 Tariff",
+    "TARIFF NAME": "Budget Energy Keypad Promo 1 (Single Rate)",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "33.821",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "22.559",
-    "ADDITIONAL INFORMATION": "Standard. (Table shows single unit rate.) Exit fee: N/A. Security deposit: N/A."
+    "ADDITIONAL INFORMATION": "Promo keypad tariff listed by supplier as Economy 7 but priced as single-rate unit. Exit fee: N/A. Security deposit: N/A."
   },
   {
     "SUPPLIER": "Budget Energy",
@@ -366,7 +366,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "29.680",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of £40 savings per year\nNo fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of \u00a340 savings per year\nNo fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -375,7 +375,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "30.140",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of £26 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of \u00a326 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -384,7 +384,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "29.060",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of £60 savings per year\nNo fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of \u00a360 savings per year\nNo fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -393,7 +393,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "29.520",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of £46 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of \u00a346 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -402,7 +402,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "31.340",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from £1–£4 for top ups between £50–£175 online or via app. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from \u00a31\u2013\u00a34 for top ups between \u00a350\u2013\u00a3175 online or via app. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -411,7 +411,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "36.500",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.450",
     "STANDING CHARGE PENCE PER DAY": "12.550",
-    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from £1–£4 for top ups between £50–£175 online or via app. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from \u00a31\u2013\u00a34 for top ups between \u00a350\u2013\u00a3175 online or via app. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -420,7 +420,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.920",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.170",
     "STANDING CHARGE PENCE PER DAY": "12.360",
-    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of £40 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of \u00a340 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -429,7 +429,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.170",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "16.810",
     "STANDING CHARGE PENCE PER DAY": "12.100",
-    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of £60 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of \u00a360 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -438,7 +438,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.920",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.170",
     "STANDING CHARGE PENCE PER DAY": "12.360",
-    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of £26 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of \u00a326 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -447,7 +447,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.170",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "16.810",
     "STANDING CHARGE PENCE PER DAY": "12.100",
-    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of £46 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of \u00a346 savings per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -474,7 +474,7 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "31.510",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of £20 per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of \u00a320 per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "Power NI",
@@ -483,20 +483,20 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "36.660",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.520",
     "STANDING CHARGE PENCE PER DAY": "12.620",
-    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of £20 per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
+    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of \u00a320 per year. No fixed term contract.\nNo exit fee\nAvailable to new and existing customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 10% discount plus £130 welcome credit",
+    "TARIFF NAME": "1 Year Home Electricity 10% discount plus \u00a3130 welcome credit 24hr",
     "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "31.020",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay. Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay. Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 12% discount",
+    "TARIFF NAME": "1 Year Home Electricity 12% discount 24hr",
     "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "32.500",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
@@ -514,43 +514,43 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 12% discount plus £130 welcome credit (E7)",
+    "TARIFF NAME": "1 Year Home Electricity 12% discount plus \u00a3130 welcome credit (E7)",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "34.460",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
     "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 12% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 12% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 13% discount plus £130 welcome credit",
+    "TARIFF NAME": "1 Year Home Electricity 13% discount plus \u00a3130 welcome credit 24hr",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "28.800",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 13% discount plus £130 welcome credit (E7)",
+    "TARIFF NAME": "1 Year Home Electricity 13% discount plus \u00a3130 welcome credit (E7)",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "34.070",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
     "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term"
+    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 15% discount plus £130 welcome credit",
+    "TARIFF NAME": "1 Year Home Electricity 15% discount plus \u00a3130 welcome credit 24hr",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "27.330",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 16% discount",
+    "TARIFF NAME": "1 Year Home Electricity 16% discount 24hr",
     "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "31.020",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
@@ -568,7 +568,7 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 22% discount",
+    "TARIFF NAME": "1 Year Home Electricity 22% discount 24hr",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "28.800",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
@@ -586,7 +586,7 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 26% discount",
+    "TARIFF NAME": "1 Year Home Electricity 26% discount 24hr",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "27.330",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
@@ -604,48 +604,48 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount plus £130 welcome credit",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount plus \u00a3130 welcome credit 24hr",
     "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "32.500",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay. Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay. Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount plus £130 welcome credit (E7)",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount plus \u00a3130 welcome credit (E7)",
     "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.640",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
     "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
+    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term\nOnly available to new customers"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount plus £130 welcome credit (E7)",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount plus \u00a3130 welcome credit (E7)",
     "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "35.640",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
     "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates plus £130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term"
+    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates plus \u00a3130 welcome credit\nStart Date: 02/12/2024\nContract Type: Bill pay, Fixed term"
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Keypad 17% discount + £70 credit (24hr)",
+    "TARIFF NAME": "1 Year Home Keypad 17% discount + \u00a370 credit (24hr)",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "30.650",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 17% on SSE Airtricity standard unit rate. Available to new customers only. £70 free credit."
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 17% on SSE Airtricity standard unit rate. Available to new customers only. \u00a370 free credit."
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Keypad 17% discount + £70 credit (E7 meter)",
+    "TARIFF NAME": "1 Year Home Keypad 17% discount + \u00a370 credit (E7 meter)",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "32.510",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.870",
     "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 17% on SSE Airtricity standard unit rates (Day and Night). Available to new customers only. £70 free credit."
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 17% on SSE Airtricity standard unit rates (Day and Night). Available to new customers only. \u00a370 free credit."
   },
   {
     "SUPPLIER": "SSE Airtricity",
