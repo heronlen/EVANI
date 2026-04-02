@@ -4,5 +4,6 @@
   "update_notice": "Tariffs have now been updated to reflect changes from 1 April.",
   "update_detail": "They’re based on publicly available supplier and Consumer Council data at the time of update. As suppliers regularly change or withdraw offers, there may be some variation between updates.",
   "volunteer_note": "This is a volunteer-led effort, and we’re doing our best to keep things accurate.",
-  "contact_email": "Spot an error: hello@evani.uk"
+  "contact_email": "hello@evani.uk",
+  "contact_text": "If you spot anything that doesn’t look right, let us know:"
 }
