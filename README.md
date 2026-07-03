@@ -6,8 +6,6 @@ Created by downloading https://www.consumercouncil.org.uk/consumers/help-consume
 and https://www.consumercouncil.org.uk/consumers/help-consumers/electricity-oil-and-gas/switching-electricity-or-gas-supplier/electricity-price-comparison-table
 (pdf versions)
 
-Copy and paste results into full_electricity_tariffs_comparison_complete.json (do not change file name - the calcualator reads this file) - before overwriting copy the results into old_tariffs.json.
-
-HTML code is as per EVANITariffCalc.html file
+Tariff data is maintained to mirror the Consumer Council NI Electricity Price Comparison and Economy 7 tables. Tariffs no longer listed by the Consumer Council are removed and newly listed tariffs are added at each refresh.
 
 Created by Steven Law
