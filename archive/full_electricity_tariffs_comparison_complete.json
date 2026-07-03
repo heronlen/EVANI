@@ -1,0 +1,696 @@
+[
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy Keypad 20% Discount",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "30.078",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "9.975",
+    "ADDITIONAL INFORMATION": "12 month discount off Budget Energy's Standard Tariff. No exit fee. You must be a new customer moving to Budget Energy."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy £100 Loyalty and 18% Discount",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.461",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 18% on Budget standard unit rate. £100 free credit applied after your first quarterly bill has issued. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy £100 Loyalty and 18% Discount",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.461",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of 18% on Budget standard unit rate. £100 free credit applied after your first quarterly bill has issued. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy Keypad £60 Loyalty & 16% Discount",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.582",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "18.233",
+    "ADDITIONAL INFORMATION": "Discount 16% and £60 Energy Credit. £30 after completion of switchover/renewal and £30 after 9 months. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy Bill Pay Discount 2%",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.597",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy Bill Pay Discount 2%",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.597",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Keypad Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.597",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "18.233",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay - Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.367",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay - Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.367",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay - Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.367",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay - Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.367",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "14.553",
+    "ADDITIONAL INFORMATION": "No contract. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Budget Energy Keypad Promotional 1 Economy 7",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "33.821",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "16.499",
+    "STANDING CHARGE PENCE PER DAY": "22.559",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee. 1 year fixed term 16% discount and receive a £40 welcome credit. Only available for new customers."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Keypad Economy 7",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "40.262",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.461",
+    "STANDING CHARGE PENCE PER DAY": "22.559",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "42.912",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.138",
+    "STANDING CHARGE PENCE PER DAY": "24.035",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "42.912",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.138",
+    "STANDING CHARGE PENCE PER DAY": "24.035",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "42.912",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.138",
+    "STANDING CHARGE PENCE PER DAY": "24.035",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
+  },
+  {
+    "SUPPLIER": "Budget Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "42.912",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.138",
+    "STANDING CHARGE PENCE PER DAY": "24.035",
+    "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay 24h",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay 24h",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay 24h",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay 24h",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Day & Night",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Day & Night",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Day & Night",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Day & Night",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Bill Pay Economy 7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "10.219",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad 24h",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad Day & Night",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad Economy 7",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.771",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.291",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad Powershift (Low)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad Powershift (Normal)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Click Energy",
+    "TARIFF NAME": "Keypad Powershift (Peak)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.808",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "12.795",
+    "ADDITIONAL INFORMATION": "No Fixed Term Contract. Effective from 1 April 2026."
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Monthly Direct Debit with online billing",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "30.220",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of £60 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Quarterly Direct Debit with online billing",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "30.700",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of £46 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Monthly Direct Debit",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "30.860",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of £40 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Keypad",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.340",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from £1 - £4 for top ups between £50 - £175 online or via app. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Quarterly Direct Debit",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.350",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of £26 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Standard with online billing",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.510",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of £20 per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Standard",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.150",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Standard rate. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Quarterly Direct Debit (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.680",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.430",
+    "STANDING CHARGE PENCE PER DAY": "12.550",
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Maximum of £26 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Monthly Direct Debit with online billing (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "16.810",
+    "STANDING CHARGE PENCE PER DAY": "12.100",
+    "ADDITIONAL INFORMATION": "Equivalent to 6% off Standard Rate. Maximum of £60 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Monthly Direct Debit (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.920",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.170",
+    "STANDING CHARGE PENCE PER DAY": "12.360",
+    "ADDITIONAL INFORMATION": "Equivalent to 4% off Standard Rate. Maximum of £40 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Quarterly Direct Debit with online billing (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.480",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.080",
+    "STANDING CHARGE PENCE PER DAY": "12.300",
+    "ADDITIONAL INFORMATION": "Equivalent to 4.5% off Standard Rate. Maximum of £46 savings per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Keypad (E7)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.500",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.450",
+    "STANDING CHARGE PENCE PER DAY": "12.550",
+    "ADDITIONAL INFORMATION": "Equivalent to 2.5% off Standard Rate. Keypad reward: free electricity from £1 - £4 for top ups between £50 - £175 online or via app. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Standard Rate with online billing (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.660",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.520",
+    "STANDING CHARGE PENCE PER DAY": "12.620",
+    "ADDITIONAL INFORMATION": "Equivalent to 2% off Standard Rate is available for customers who activate an energy online account. Energy online account maximum savings of £20 per year. No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+  {
+    "SUPPLIER": "Power NI",
+    "TARIFF NAME": "Standard Rate (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.410",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.880",
+    "STANDING CHARGE PENCE PER DAY": "12.880",
+    "ADDITIONAL INFORMATION": "No fixed term contract. No exit fee. Available to new and existing customers"
+  },
+ {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 15% discount",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.110",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 13% discount",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.880",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 10% discount plus £60 welcome credit",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.020",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "SmartSaver Std 6% 24hr",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.110",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "SmartSaver Std 4% 24hr",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.880",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "SmartSaver Std 1% 24hr",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.020",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "SmartSaver Standard 24hr",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.410",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 13% discount (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 10% discount plus £60 welcome credit (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Smartsaver Standard - E7 4%",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Smartsaver Standard - E7 3%",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Smartsaver Standard - E7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Keypad Standard 24hr 2.5%",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.450",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Keypad Economy 7",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.190",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.640",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": ""
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share 24 Credit",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.960",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share 24 Credit",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.960",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share 24 Credit-Pay on receipt of bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.960",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo early exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share 24 Credit-Pay on receipt of e-bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.960",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo early exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share 24 Keypad",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.960",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0.000",
+    "STANDING CHARGE PENCE PER DAY": "16.670",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share EV- Direct debit e-bill",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No exit fee\nNo fixed term"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share EV- Direct debit postal bill",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No exit fee\nNo fixed term"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share EV- Pay on receipt of bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No exit fee\nNo fixed term"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share EV- Pay on receipt of e-bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No exit fee\nNo fixed term"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share Eco 7 Keypad",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "16.670",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share Eco 7- Pay on receipt of bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share Eco 7- Pay on receipt of bill or e-bill",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share Eco 7-Direct debit e-bill",
+    "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  },
+  {
+    "SUPPLIER": "Share Energy",
+    "TARIFF NAME": "Share Eco 7-Direct debit postal bill",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.040",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "15.560",
+    "STANDING CHARGE PENCE PER DAY": "13.330",
+    "ADDITIONAL INFORMATION": "No fixed term\nNo exit fee"
+  }
+]
