@@ -201,55 +201,19 @@
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Home Electricity 15% discount",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.640",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.670",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+    "ADDITIONAL INFORMATION": "Get up to 15% off our standard electricity unit rates. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Home Electricity 13% discount",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "33.410",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.490",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Keypad 10.5% discount plus £30 welcome credit (24hr)",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.380",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "1 Year fixed term discount of up to 10.5% on SSE Airtricity standard unit rate and £30 welcome credit. Available to new customers only."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 10% discount plus £60 welcome credit",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.570",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus £60 welcome credit. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.950",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 9% off our standard electricity unit rates. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 8% discount plus £60 welcome credit",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.330",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 8% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
+    "ADDITIONAL INFORMATION": "Get up to 13% off our standard electricity unit rates. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -262,21 +226,39 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Keypad 10.5% discount plus £30 welcome credit (24hr)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.510",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of up to 10.5% on SSE Airtricity standard unit rate and £30 welcome credit. Available to new customers only."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 10% discount plus £60 welcome credit",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.720",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus £60 welcome credit. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.120",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Get up to 9% off our standard electricity unit rates. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "SmartSaver Std 4% 24hr",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
     "DAY UNIT RATE PENCE PER UNIT/KWH": "36.880",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "4% off SSE Airtricity standard unit rate. No contract."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 4% discount plus £60 welcome credit",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.880",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 4% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -289,12 +271,12 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 2% discount plus £60 welcome credit",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.640",
+    "TARIFF NAME": "1 Year Home Electricity 8% discount plus £60 welcome credit",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.530",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Get up to 2% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
+    "ADDITIONAL INFORMATION": "Get up to 8% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -316,9 +298,27 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 4% discount plus £60 welcome credit",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Get up to 4% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 2% discount plus £60 welcome credit",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.970",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
+    "ADDITIONAL INFORMATION": "Get up to 2% off our standard electricity unit rates plus £60 welcome credit (must be redeemed within one year, see T&Cs). Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "Standard Rate 24hr",
     "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.410",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "40.790",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
     "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "Standard rate. No contract."
@@ -543,73 +543,37 @@
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Home Electricity 13% discount",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.070",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 13% off standard electricity unit rates. Start Date: 25/03/2026. £40 early exit fee. Contract Type: Bill pay, Fixed term."
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.180",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.470",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 13% off standard electricity unit rates. Start Date: 01/08/2026. £40 early exit fee. Contract Type: Bill pay, Fixed term."
   },
   {
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Home Electricity 12% discount (E7)",
     "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "34.460",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 12% off our standard electricity unit rates. Start Date: 25/03/2024. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.600",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.470",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 12% off our standard electricity unit rates. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Keypad 10.5% discount plus £30 welcome credit (E7 meter)",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.050",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.100",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "1 Year fixed term discount of up to 10.5% on SSE Airtricity standard unit rates (Day and Night) plus £30 welcome credit. Start date: 02/04/2026. Available to new customers only."
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.220",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.170",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "1 Year fixed term discount of up to 10.5% on SSE Airtricity standard unit rates (Day and Night) plus £30 welcome credit. Start date: 01/08/2026. Available to new customers only."
   },
   {
     "SUPPLIER": "SSE Airtricity",
     "TARIFF NAME": "1 Year Home Electricity 10% discount plus £60 welcome credit (E7)",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.250",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.150",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus £60 welcome credit. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount (E7)",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.640",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 9% discount (E7)",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "35.640",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "17.390",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 8% discount plus £60 welcome credit (E7)",
-    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "36.040",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.340",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 8% off our standard electricity unit rates plus £60 welcome credit. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 4% discount plus £60 welcome credit (E7)",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.600",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.730",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 4% off our standard electricity unit rates plus £60 welcome credit. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.430",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.280",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 10% off our standard electricity unit rates plus £60 welcome credit. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -619,6 +583,24 @@
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
     "STANDING CHARGE PENCE PER DAY": "10.220",
     "ADDITIONAL INFORMATION": "4% off SSE Airtricity standard unit rate. No contract."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.850",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.470",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 9% discount (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "37.850",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.470",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 9% off standard electricity unit rates. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -640,30 +622,12 @@
   },
   {
     "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "1 Year Home Electricity 2% discount plus £60 welcome credit (E7)",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.380",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "18.920",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Get up to 2% off our standard electricity unit rates plus £60 welcome credit. Start Date: 25/03/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "Keypad Standard Rate 24hr (E7)",
-    "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
-    "STANDING CHARGE PENCE PER DAY": "0.000",
-    "ADDITIONAL INFORMATION": "Standard rate. No contract."
-  },
-  {
-    "SUPPLIER": "SSE Airtricity",
-    "TARIFF NAME": "Smartsaver Standard - E7",
-    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
-    "STANDING CHARGE PENCE PER DAY": "10.220",
-    "ADDITIONAL INFORMATION": "Standard rate. No contract."
+    "TARIFF NAME": "1 Year Home Electricity 8% discount plus £60 welcome credit (E7)",
+    "PAYMENT & BILLING METHOD": "Direct Debit postal bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "38.260",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.490",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 8% off our standard electricity unit rates plus £60 welcome credit. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
   },
   {
     "SUPPLIER": "SSE Airtricity",
@@ -672,6 +636,42 @@
     "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
     "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": "Standard rate. No contract."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Smartsaver Standard - E7",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.170",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.110",
+    "STANDING CHARGE PENCE PER DAY": "10.220",
+    "ADDITIONAL INFORMATION": "Standard rate. No contract."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 4% discount plus £60 welcome credit (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of e-bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "39.930",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.890",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 4% off our standard electricity unit rates plus £60 welcome credit. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "1 Year Home Electricity 2% discount plus £60 welcome credit (E7)",
+    "PAYMENT & BILLING METHOD": "Pay on receipt of bill",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "40.760",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "20.100",
+    "STANDING CHARGE PENCE PER DAY": "10.850",
+    "ADDITIONAL INFORMATION": "Get up to 2% off our standard electricity unit rates plus £60 welcome credit. Start Date: 01/08/2026. Contract Type: Bill pay, Fixed term. £40 early exit fee. Only available to new customers."
+  },
+  {
+    "SUPPLIER": "SSE Airtricity",
+    "TARIFF NAME": "Keypad Standard Rate 24hr (E7)",
+    "PAYMENT & BILLING METHOD": "Prepayment meter",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "41.590",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "20.300",
+    "STANDING CHARGE PENCE PER DAY": "0.000",
     "ADDITIONAL INFORMATION": "Standard rate. No contract."
   },
   {
