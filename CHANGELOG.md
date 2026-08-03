@@ -4,23 +4,27 @@ All notable changes to the electricity tariff data, based on Consumer Council NI
 
 ---
 
-## 3 July 2026
+## 3 August 2026
 
-**Power NI** — All tariffs increased by 6.2% (effective 1 July 2026, confirmed by the Utility Regulator). This includes both standard and Economy 7 tariffs, and E7 standing charges have also risen.
+**SSE Airtricity** — Rates repriced across the board from 1 August 2026. Fixed-term discount tariffs and Smartsaver/Standard tariffs both moved up; the standing charge on fixed-term Economy 7 tariffs rose to 10.850p. Seven new tariffs added, reflecting the fuller range now shown by Consumer Council NI.
 
-**Budget Energy** — New "Billpay 25% Discount" tariff added (28.775p, the cheapest standard unit rate currently available). The old "Bill Pay Discount 2%" tariffs have been withdrawn. Corrected the Keypad Economy 7 night rate to 19.641p.
+**Budget Energy** — A further change is scheduled for 4 August 2026 (a new "Bill Pay 29% Discount" tariff and a repackaged Keypad offer). Today's rates reflect what's live up to and including 3 August; we'll pick up the 4 August change in the next update.
 
-**SSE Airtricity** — Fixed-term discount tariffs repriced (15%, 13% and 10% offers), and several new tariffs added on both the standard and Economy 7 tables, including new Keypad offers.
+All other suppliers (Power NI, Click Energy, Share Energy) — no change since the last update.
 
-**Click Energy** — Following wholesale price rises, Click have withdrawn all discounted tariffs: Round the Clock, Twilight, Day & Night, Powershift, and both Economy 7 Saver tariffs. Only Bill Pay 24h, Keypad 24h, Bill Pay Economy 7 and Keypad Economy 7 remain.
+*Note: this changelog was only added to the site today. The entry below summarises everything that changed since the calculator's last confirmed update in April, since several tariff changes over that period weren't previously logged.*
 
-**Share Energy** — No rate changes. Share EV remains the cheapest night rate for EV charging at 15.560p.
+## Since April 2026 (summary)
 
----
+**Power NI** — 6.2% increase applied across all standard and Economy 7 tariffs, effective 1 July 2026, including revised Economy 7 standing charges.
 
-## 1 April 2026
+**Budget Energy** — Added "Billpay 25% Discount" (cheapest standard rate at the time). Removed the old "Bill Pay Discount 2%" tariffs. Corrected the Keypad Economy 7 night rate.
 
-Tariff data refreshed from Consumer Council NI tables. Click Energy tariffs updated to rates effective 1 April 2026.
+**SSE Airtricity** — Multiple fixed-term discount tariffs repriced; several new tariffs added on both standard and Economy 7 tables.
+
+**Click Energy** — Withdrawn tariffs: Round the Clock, Twilight, Day & Night, Powershift (all variants), and both Economy 7 Saver tariffs, following a statement citing wholesale gas price rises linked to Middle East tensions. Only Bill Pay 24h, Keypad 24h, Bill Pay Economy 7 and Keypad Economy 7 remain.
+
+**Share Energy** — No rate changes during this period.
 
 ---
 
