@@ -4,15 +4,23 @@ All notable changes to the electricity tariff data, based on Consumer Council NI
 
 ---
 
-## 3 August 2026
+## 4 August 2026
 
-**SSE Airtricity** — Rates repriced across the board from 1 August 2026. Fixed-term discount tariffs and Smartsaver/Standard tariffs both moved up; the standing charge on fixed-term Economy 7 tariffs rose to 10.850p. Seven new tariffs added, reflecting the fuller range now shown by Consumer Council NI.
+**Budget Energy** — Major refresh, effective from today. New "Bill Pay 29% Discount" tariff added (29.830p — now the cheapest standard rate on the market, new customers only). New "Keypad Loyalty 20% Discount" and "£80 Discount and Keypad 20% Discount" tariffs added. Existing discount tariffs (Billpay 25%, £100 Loyalty 18%, Keypad £60 Loyalty 16%) all repriced upward, reflecting a general Budget Energy increase alongside the new offers.
 
-**Budget Energy** — A further change is scheduled for 4 August 2026 (a new "Bill Pay 29% Discount" tariff and a repackaged Keypad offer). Today's rates reflect what's live up to and including 3 August; we'll pick up the 4 August change in the next update.
+**SSE Airtricity** — A further reprice on top of the 1 August change already captured. SmartSaver and Keypad standard-rate tariffs, and the Economy 7 SmartSaver/Keypad range, are all up again. The "Keypad Standard Rate 24hr" Economy 7 tariff's standing charge is now correctly showing 10.850p (it was oddly listed as 0.000p in the previous update — this appears to have been a Consumer Council data correction, not a supplier change).
 
 All other suppliers (Power NI, Click Energy, Share Energy) — no change since the last update.
 
-*Note: this changelog was only added to the site today. The entry below summarises everything that changed since the calculator's last confirmed update in April, since several tariff changes over that period weren't previously logged.*
+*Note: Budget Energy's Economy 7 "Keypad Promotional 1" tariff is still flagged by Consumer Council NI as having a change scheduled for today, but no new figures have been published yet — we'll pick this up next time it appears.*
+
+## 3 August 2026
+
+**SSE Airtricity** — Rates repriced across the board from 1 August 2026. Fixed-term discount tariffs and Smartsaver/Standard tariffs both moved up; the standing charge on fixed-term Economy 7 tariffs rose to 10.850p. Several new tariffs added, reflecting the fuller range now shown by Consumer Council NI.
+
+All other suppliers (Power NI, Click Energy, Share Energy) — no change from the previous update.
+
+*Note: this changelog was only added to the site on 3 August. The entry below summarises everything that changed since the calculator's last confirmed update in April, since several tariff changes over that period weren't previously logged.*
 
 ## Since April 2026 (summary)
 
