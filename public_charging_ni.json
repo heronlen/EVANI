@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-09-10",
+  "last_updated_display": "10 September 2026",
+  "currency": "GBP",
+  "unit": "pence per kWh, VAT included",
+  "note": "Public charging prices for charge point operators (CPOs) with a presence in Northern Ireland. Unlike the home tariff data there is no single source for this - see PUBLIC-CHARGING-DATA.md for how each row is obtained and how far it can be trusted.",
+  "vat_note": "Public charging is charged at 20% VAT in the UK, not the 5% that applies to domestic electricity. Prices below are the advertised inc-VAT price.",
+  "operators": [
+    {
+      "id": "esb-ecars",
+      "name": "ESB ecars",
+      "website": "https://esb.ie/what-we-do/ecars",
+      "price_page": "https://esb.ie/what-we-do/ecars/price-plans",
+      "ni_presence": "major",
+      "ni_note": "Operates the original NI public network plus Levelling Up Fund high power hubs. Prices below are the Northern Ireland sterling prices, effective 1 July 2026.",
+      "open_data": {
+        "status": "unknown",
+        "ocpi_versions_url": null,
+        "auth_required": null,
+        "notes": "No public PCPR open-data page found. NI charge points are in scope of the Public Charge Point Regulations 2023, so an open OCPI feed can be requested."
+      },
+      "tariffs": [
+        { "label": "Standard, up to 50 kW", "band": "fast", "access": "contactless", "price_p_per_kwh": 61.0 },
+        { "label": "Standard, up to 50 kW", "band": "fast", "access": "payg_app", "price_p_per_kwh": 60.0 },
+        { "label": "Standard, up to 50 kW", "band": "fast", "access": "subscription", "price_p_per_kwh": 57.0 },
+        { "label": "Rapid / high power, above 50 kW", "band": "rapid", "access": "contactless", "price_p_per_kwh": 75.0 },
+        { "label": "Rapid / high power, above 50 kW", "band": "rapid", "access": "payg_app", "price_p_per_kwh": 74.0 },
+        { "label": "Rapid / high power, above 50 kW", "band": "rapid", "access": "subscription", "price_p_per_kwh": 70.0 }
+      ],
+      "source_url": "https://www.electrive.com/2026/07/01/esb-ecars-raises-charging-prices-across-ireland-and-northern-ireland/",
+      "source_type": "press",
+      "confidence": "reported",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "weev",
+      "name": "Weev",
+      "website": "https://weev.ie/",
+      "price_page": "https://weev.ie/our-network/driver-resources/our-tariffs",
+      "ni_presence": "major",
+      "ni_note": "Belfast-based, the largest home-grown NI network. Publishes a tariff page in sterling for NI and euro for ROI. Sterling per-kWh rates still to be confirmed from the operator page.",
+      "open_data": {
+        "status": "unknown",
+        "ocpi_versions_url": null,
+        "auth_required": null,
+        "notes": "No public PCPR open-data page found. NI sites are in scope of the regulations."
+      },
+      "tariffs": [
+        { "label": "AC", "band": "ac", "access": "payg_app", "price_p_per_kwh": null },
+        { "label": "AC", "band": "ac", "access": "contactless", "price_p_per_kwh": null },
+        { "label": "Rapid / ultra rapid", "band": "rapid", "access": "payg_app", "price_p_per_kwh": null },
+        { "label": "Rapid / ultra rapid", "band": "rapid", "access": "contactless", "price_p_per_kwh": null }
+      ],
+      "fees_note": "£1 pre-authorisation on app sessions in NI; £50 holding fee on contactless, refunded within 7 working days. Overstay £0.50/min after 65 minutes on rapid and ultra rapid.",
+      "source_url": "https://weev.ie/our-network/driver-resources/our-tariffs",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    },
+    {
+      "id": "instavolt",
+      "name": "InstaVolt",
+      "website": "https://instavolt.co.uk/",
+      "price_page": "https://instavolt.co.uk/charging-tariff/",
+      "ni_presence": "present",
+      "ni_note": "UK-wide single national price, so the NI price is the GB price.",
+      "open_data": {
+        "status": "unknown",
+        "ocpi_versions_url": null,
+        "auth_required": null,
+        "notes": "Guessed OCPI hostname ocpi.instavolt.co.uk does not resolve. Open-data location not yet confirmed."
+      },
+      "tariffs": [
+        { "label": "Rapid / ultra rapid, peak", "band": "rapid", "access": "contactless", "price_p_per_kwh": 92.0 },
+        { "label": "Rapid / ultra rapid, off-peak 8pm-7am", "band": "rapid", "access": "payg_app", "price_p_per_kwh": 55.0 }
+      ],
+      "fees_note": "Off-peak app rate introduced 22 April 2026, no subscription required. Fully contactless, no account needed.",
+      "source_url": "https://www.zapmap.com/ev-stats/rapid-charging-prices",
+      "source_type": "aggregator",
+      "confidence": "reported",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "bp-pulse",
+      "name": "bp pulse",
+      "website": "https://www.bppulse.co.uk/",
+      "price_page": "https://www.bppulse.co.uk/pricing",
+      "ni_presence": "present",
+      "open_data": {
+        "status": "unknown",
+        "ocpi_versions_url": null,
+        "auth_required": null,
+        "notes": "Open-data location not yet confirmed."
+      },
+      "tariffs": [
+        { "label": "Rapid / ultra rapid", "band": "rapid", "access": "contactless", "price_p_per_kwh": 79.0, "price_p_per_kwh_high": 89.0 },
+        { "label": "Rapid / ultra rapid", "band": "rapid", "access": "subscription", "price_p_per_kwh": 55.0, "price_p_per_kwh_high": 65.0 }
+      ],
+      "source_url": "https://www.zapmap.com/ev-stats/rapid-charging-prices",
+      "source_type": "aggregator",
+      "confidence": "reported",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "tesla-supercharger",
+      "name": "Tesla Supercharger",
+      "website": "https://www.tesla.com/en_GB/supercharger",
+      "price_page": "https://www.tesla.com/en_GB/supercharger",
+      "ni_presence": "present",
+      "ni_note": "Price varies by site and time of day. Not every NI site is open to non-Tesla vehicles - check the Tesla app.",
+      "open_data": {
+        "status": "unknown",
+        "ocpi_versions_url": null,
+        "auth_required": null,
+        "notes": "Tesla runs OCPI for roaming partners. Open-data location not yet confirmed."
+      },
+      "tariffs": [
+        { "label": "Supercharger, daytime, non-member", "band": "ultra", "access": "payg_app", "price_p_per_kwh": 63.0 },
+        { "label": "Supercharger, member", "band": "ultra", "access": "subscription", "price_p_per_kwh": 29.0 }
+      ],
+      "fees_note": "Membership around £8.99/month. Idle fees apply when the site is busy.",
+      "source_url": "https://www.zapmap.com/ev-stats/rapid-charging-prices",
+      "source_type": "aggregator",
+      "confidence": "reported",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "easygo",
+      "name": "EasyGo",
+      "website": "https://easygo.ie/",
+      "price_page": "https://easygo.ie/pricing/",
+      "ni_presence": "present",
+      "ni_note": "All-island operator. Sterling NI rates to be confirmed.",
+      "open_data": { "status": "unknown", "ocpi_versions_url": null, "auth_required": null, "notes": "" },
+      "tariffs": [],
+      "source_url": "https://easygo.ie/pricing/",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    },
+    {
+      "id": "applegreen-electric",
+      "name": "Applegreen Electric",
+      "website": "https://applegreenelectric.com/",
+      "price_page": "https://applegreenelectric.com/",
+      "ni_presence": "present",
+      "open_data": { "status": "unknown", "ocpi_versions_url": null, "auth_required": null, "notes": "" },
+      "tariffs": [],
+      "source_url": "https://applegreenelectric.com/",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    },
+    {
+      "id": "maxol-recharge",
+      "name": "Maxol",
+      "website": "https://www.maxol.co.uk/",
+      "price_page": "https://www.maxol.co.uk/",
+      "ni_presence": "present",
+      "open_data": { "status": "unknown", "ocpi_versions_url": null, "auth_required": null, "notes": "" },
+      "tariffs": [],
+      "source_url": "https://www.maxol.co.uk/",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    },
+    {
+      "id": "ionity",
+      "name": "IONITY",
+      "website": "https://ionity.eu/",
+      "price_page": "https://ionity.eu/en/prices",
+      "ni_presence": "limited",
+      "open_data": { "status": "unknown", "ocpi_versions_url": null, "auth_required": null, "notes": "" },
+      "tariffs": [],
+      "source_url": "https://ionity.eu/en/prices",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    },
+    {
+      "id": "circle-k",
+      "name": "Circle K",
+      "website": "https://www.circlek.ie/",
+      "price_page": "https://www.circlek.ie/",
+      "ni_presence": "present",
+      "ni_note": "All chargers 100 kW minimum, some hubs to 400 kW.",
+      "open_data": { "status": "unknown", "ocpi_versions_url": null, "auth_required": null, "notes": "" },
+      "tariffs": [],
+      "source_url": "https://www.circlek.ie/",
+      "source_type": "operator",
+      "confidence": "needs_check",
+      "verified_on": null
+    }
+  ]
+}

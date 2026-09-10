@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NI Public EV Charging Price Table</title>
+
+  <!-- Icons -->
+  <link rel="icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" sizes="32x32" />
+  <link rel="icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://evani.uk/wp-content/uploads/2021/02/favicon.png" />
+  <meta name="msapplication-TileImage" content="https://evani.uk/wp-content/uploads/2021/02/favicon.png" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root { --brand: #004E64; --brand-dark: #003C4B; --accent: #00A878; --accent-dark: #008A60; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; background-color: #f5f7fb; }
+    .container { max-width: 1100px; }
+    button { transition: all 0.2s ease-in-out; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 9999px; white-space: nowrap; }
+    th[data-sort] { cursor: pointer; user-select: none; }
+    th[data-sort]:hover { color: var(--brand); }
+    input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type="number"] { -moz-appearance: textfield; }
+  </style>
+</head>
+
+<body class="flex items-start justify-center min-h-screen p-4">
+  <div class="container bg-white p-6 md:p-8 rounded-xl shadow-lg w-full my-4">
+
+    <!-- Header -->
+    <div class="flex flex-col items-center mb-6">
+      <img src="https://evani.uk/wp-content/uploads/2021/02/evani-logo3.png" alt="EVA NI Logo" class="w-24 h-auto mb-4" />
+      <h1 class="text-3xl font-bold text-center text-gray-900">NI Public EV Charging Price Table</h1>
+      <h2 class="text-lg md:text-xl font-semibold text-center text-gray-700">What the charge point operators in Northern Ireland are charging per kWh</h2>
+    </div>
+
+    <p class="text-gray-600 text-center mb-6">
+      Public charging is billed in pence per kWh, including <b>20% VAT</b> — not the 5% you pay at home.<br />
+      Rates below are the advertised prices. <b>Always check the app or the screen before you plug in.</b>
+    </p>
+
+    <!-- Freshness / status -->
+    <div id="statusBar" class="mb-6 border rounded-xl p-4 bg-gray-50 text-sm text-gray-700">Loading price data…</div>
+
+    <!-- Controls -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="border rounded-xl p-4 bg-gray-50">
+        <label for="bandFilter" class="block text-gray-700 text-sm font-semibold mb-2">Charger speed</label>
+        <select id="bandFilter" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800 bg-white">
+          <option value="all">All speeds</option>
+          <option value="ac">AC, up to 22 kW</option>
+          <option value="fast">Fast, 23–49 kW</option>
+          <option value="rapid">Rapid, 50–149 kW</option>
+          <option value="ultra">Ultra rapid, 150 kW+</option>
+        </select>
+      </div>
+      <div class="border rounded-xl p-4 bg-gray-50">
+        <label for="accessFilter" class="block text-gray-700 text-sm font-semibold mb-2">How you pay</label>
+        <select id="accessFilter" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800 bg-white">
+          <option value="all">Any method</option>
+          <option value="contactless">Contactless card</option>
+          <option value="payg_app">App / pay as you go</option>
+          <option value="subscription">Subscription member</option>
+        </select>
+      </div>
+      <div class="border rounded-xl p-4 bg-blue-50">
+        <label for="efficiency" class="block text-gray-700 text-sm font-semibold mb-2">Your car (for cost per 100 miles)</label>
+        <select id="efficiency" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800 bg-white">
+          <option value="4.7">Compact — 4.7 mi/kWh</option>
+          <option value="4.1" selected>Medium — 4.1 mi/kWh</option>
+          <option value="3.9">Large saloon — 3.9 mi/kWh</option>
+          <option value="3.6">SUV — 3.6 mi/kWh</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4 mb-4 text-sm">
+      <label class="flex items-center gap-2 text-gray-700">
+        <input type="checkbox" id="hideUnpriced" checked class="rounded border-gray-300" />
+        Hide operators with no confirmed price
+      </label>
+      <button type="button" id="refreshBtn" class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-lg">Refresh</button>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto border rounded-xl">
+      <table class="min-w-full text-sm">
+        <thead class="bg-gray-50">
+          <tr class="text-left text-gray-600 border-b">
+            <th class="py-3 px-4" data-sort="name">Operator</th>
+            <th class="py-3 px-4" data-sort="label">Charger</th>
+            <th class="py-3 px-4" data-sort="access">Pay by</th>
+            <th class="py-3 px-4" data-sort="price">p/kWh</th>
+            <th class="py-3 px-4" data-sort="price">Per 100 miles</th>
+            <th class="py-3 px-4">Source</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="6" class="py-6 px-4 text-gray-500">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Home comparison -->
+    <div id="homeCompare" class="mt-6 border rounded-xl p-4 bg-emerald-50 text-sm text-gray-700 hidden"></div>
+
+    <!-- Key -->
+    <div class="mt-6 text-xs text-gray-600 space-y-2">
+      <div class="flex flex-wrap gap-2 items-center">
+        <span class="font-semibold">How sure are we?</span>
+        <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Live feed</span>
+        <span class="badge bg-sky-100 text-sky-800 border border-sky-200">Operator page</span>
+        <span class="badge bg-amber-100 text-amber-800 border border-amber-200">Reported</span>
+        <span class="badge bg-gray-200 text-gray-700 border border-gray-300">Needs checking</span>
+      </div>
+      <p><b>Live feed</b> means it came straight from the operator's open data API. <b>Reported</b> means it came from a price comparison or news source rather than the operator's own page, so treat it as a guide.</p>
+    </div>
+
+    <!-- Footer links -->
+    <div class="text-center mt-8"><a href="https://evani.uk/join/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--accent)] text-white p-3 rounded-lg font-bold hover:bg-[var(--accent-dark)]">JOIN THE EV ASSOCIATION NI (IT'S FREE)</a></div>
+    <div class="text-center mt-4 text-sm text-gray-500">Charging at home instead? Try the <a href="https://evani.uk/" class="text-[var(--brand)] hover:underline">EVANI home charging calculator</a>.</div>
+    <div id="versionStamp" class="text-right text-xs text-gray-500 mt-2"></div>
+  </div>
+
+  <script>
+    const CONFIG = {
+      DATA_URL: 'https://raw.githubusercontent.com/heronlen/EVANI/main/public_charging_ni.json',
+      LOCAL_FALLBACK: 'public_charging_ni.json',
+      HOME_TARIFF_URL: 'https://raw.githubusercontent.com/heronlen/EVANI/main/full_electricity_tariffs_comparison_complete.json',
+      VERSION: '1.00'
+    };
+
+    const ACCESS_LABELS = { contactless: 'Contactless', payg_app: 'App / PAYG', subscription: 'Subscription' };
+    const BAND_ORDER = { ac: 0, fast: 1, rapid: 2, ultra: 3 };
+    const CONFIDENCE = {
+      api:         { text: 'Live feed',      cls: 'bg-emerald-100 text-emerald-800 border border-emerald-200' },
+      verified:    { text: 'Operator page',  cls: 'bg-sky-100 text-sky-800 border border-sky-200' },
+      reported:    { text: 'Reported',       cls: 'bg-amber-100 text-amber-800 border border-amber-200' },
+      needs_check: { text: 'Needs checking', cls: 'bg-gray-200 text-gray-700 border border-gray-300' }
+    };
+
+    let data = null;
+    let rows = [];
+    let sortKey = 'price';
+    let sortAsc = true;
+
+    function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    function flatten(d){
+      const out = [];
+      (d.operators||[]).forEach(op=>{
+        const list = op.tariffs && op.tariffs.length ? op.tariffs : [{ label:'—', band:null, access:null, price_p_per_kwh:null }];
+        list.forEach(t=>{
+          out.push({
+            id: op.id,
+            name: op.name,
+            website: op.website,
+            pricePage: op.price_page || op.website,
+            niNote: op.ni_note || '',
+            feesNote: op.fees_note || '',
+            label: t.label || '—',
+            band: t.band || null,
+            access: t.access || null,
+            price: (typeof t.price_p_per_kwh === 'number') ? t.price_p_per_kwh : null,
+            priceHigh: (typeof t.price_p_per_kwh_high === 'number') ? t.price_p_per_kwh_high : null,
+            confidence: t.confidence || (t.price_p_per_kwh == null ? 'needs_check' : op.confidence) || 'needs_check',
+            sourceUrl: t.source_url || op.source_url || op.website,
+            verifiedOn: t.verified_on || op.verified_on || null
+          });
+        });
+      });
+      return out;
+    }
+
+    function priceText(r){
+      if(r.price == null) return '<span class="text-gray-400">not confirmed</span>';
+      if(r.priceHigh != null) return `${r.price.toFixed(0)}–${r.priceHigh.toFixed(0)}p`;
+      return `${r.price.toFixed(1)}p`;
+    }
+
+    function per100(r, eff){
+      if(r.price == null) return '<span class="text-gray-400">—</span>';
+      const kwh = 100 / eff;
+      const low = (r.price * kwh) / 100;
+      if(r.priceHigh != null){
+        const high = (r.priceHigh * kwh) / 100;
+        return `£${low.toFixed(2)}–£${high.toFixed(2)}`;
+      }
+      return `£${low.toFixed(2)}`;
+    }
+
+    function applyFilters(){
+      const band = document.getElementById('bandFilter').value;
+      const access = document.getElementById('accessFilter').value;
+      const hideUnpriced = document.getElementById('hideUnpriced').checked;
+      return rows.filter(r=>{
+        if(band !== 'all' && r.band !== band) return false;
+        if(access !== 'all' && r.access !== access) return false;
+        if(hideUnpriced && r.price == null) return false;
+        return true;
+      });
+    }
+
+    function sortRows(list){
+      const dir = sortAsc ? 1 : -1;
+      return list.slice().sort((a,b)=>{
+        if(sortKey === 'price'){
+          if(a.price == null && b.price == null) return a.name.localeCompare(b.name);
+          if(a.price == null) return 1;
+          if(b.price == null) return -1;
+          if(a.price !== b.price) return (a.price - b.price) * dir;
+          return a.name.localeCompare(b.name);
+        }
+        if(sortKey === 'access'){
+          return String(a.access||'').localeCompare(String(b.access||'')) * dir;
+        }
+        if(sortKey === 'label'){
+          const ab = BAND_ORDER[a.band] ?? 9, bb = BAND_ORDER[b.band] ?? 9;
+          if(ab !== bb) return (ab - bb) * dir;
+          return a.label.localeCompare(b.label) * dir;
+        }
+        return a.name.localeCompare(b.name) * dir;
+      });
+    }
+
+    function render(){
+      const eff = parseFloat(document.getElementById('efficiency').value) || 4.1;
+      const list = sortRows(applyFilters());
+      const body = document.getElementById('tableBody');
+
+      if(list.length === 0){
+        body.innerHTML = `<tr><td colspan="6" class="py-6 px-4 text-gray-500">Nothing matches those filters. Try widening them, or untick "hide operators with no confirmed price".</td></tr>`;
+        renderHomeCompare(null, eff);
+        return;
+      }
+
+      let cheapest = null;
+      list.forEach(r=>{ if(r.price != null && (cheapest === null || r.price < cheapest.price)) cheapest = r; });
+
+      // Operator notes are long, so show them once per operator rather than on every row.
+      const noteShown = new Set();
+
+      body.innerHTML = list.map(r=>{
+        const c = CONFIDENCE[r.confidence] || CONFIDENCE.needs_check;
+        const isCheapest = cheapest && r === cheapest;
+        const note = noteShown.has(r.id) ? '' : [r.niNote, r.feesNote].filter(Boolean).join(' ');
+        noteShown.add(r.id);
+        return `<tr class="border-b ${isCheapest ? 'bg-emerald-50' : ''}">
+          <td class="py-3 px-4 align-top">
+            <div class="font-semibold text-gray-800">${isCheapest ? '🥇 ' : ''}${esc(r.name)}</div>
+            ${note ? `<div class="text-xs text-gray-500 mt-1 max-w-md">${esc(note)}</div>` : ''}
+          </td>
+          <td class="py-3 px-4 align-top text-gray-700">${esc(r.label)}</td>
+          <td class="py-3 px-4 align-top text-gray-700">${esc(ACCESS_LABELS[r.access] || '—')}</td>
+          <td class="py-3 px-4 align-top font-semibold text-gray-900 whitespace-nowrap">${priceText(r)}</td>
+          <td class="py-3 px-4 align-top text-gray-900 whitespace-nowrap">${per100(r, eff)}</td>
+          <td class="py-3 px-4 align-top">
+            <span class="badge ${c.cls}">${c.text}</span>
+            <div class="text-xs mt-1"><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="text-[var(--brand)] hover:underline">check price</a>${r.verifiedOn ? ` <span class="text-gray-400">· ${esc(r.verifiedOn)}</span>` : ''}</div>
+          </td>
+        </tr>`;
+      }).join('');
+
+      renderHomeCompare(cheapest, eff);
+    }
+
+    let cheapestHomeNight = null;
+
+    function renderHomeCompare(cheapestPublic, eff){
+      const el = document.getElementById('homeCompare');
+      if(cheapestHomeNight == null || !cheapestPublic || cheapestPublic.price == null){ el.classList.add('hidden'); return; }
+      const kwh = 100 / eff;
+      const homeCost = (cheapestHomeNight.rate * kwh) / 100;
+      const publicCost = (cheapestPublic.price * kwh) / 100;
+      const multiple = publicCost / homeCost;
+      el.innerHTML = `<b>Worth knowing:</b> the cheapest Economy 7 night rate in NI right now is
+        <b>${cheapestHomeNight.rate.toFixed(3)}p/kWh</b> (${esc(cheapestHomeNight.supplier)}), which works out at
+        <b>£${homeCost.toFixed(2)}</b> per 100 miles. The cheapest public rate showing above is
+        <b>£${publicCost.toFixed(2)}</b> — about <b>${multiple.toFixed(1)}×</b> the cost of charging overnight at home.`;
+      el.classList.remove('hidden');
+    }
+
+    function renderStatus(){
+      const el = document.getElementById('statusBar');
+      const ops = (data.operators||[]).length;
+      const priced = rows.filter(r=>r.price != null).length;
+      const needs = (data.operators||[]).filter(o=>o.confidence === 'needs_check').length;
+      const live = rows.filter(r=>r.confidence === 'api').length;
+      el.innerHTML = `
+        <div class="flex flex-wrap gap-x-6 gap-y-1">
+          <div><b>${ops}</b> operators tracked</div>
+          <div><b>${priced}</b> confirmed rates</div>
+          <div><b>${live}</b> from live feeds</div>
+          <div>Last updated <b>${esc(data.last_updated_display || data.last_updated || 'unknown')}</b></div>
+        </div>
+        ${needs ? `<div class="mt-2 text-amber-800">⚠️ ${needs} operator${needs===1?'':'s'} still need${needs===1?'s':''} a price checked by hand — see the "needs checking" rows.</div>` : ''}
+        <div class="mt-2 text-gray-500">${esc(data.vat_note || '')}</div>`;
+    }
+
+    async function loadHomeTariffs(){
+      try{
+        const r = await fetch(CONFIG.HOME_TARIFF_URL, { cache: 'no-store' });
+        if(!r.ok) return;
+        const d = await r.json();
+        d.forEach(it=>{
+          const night = parseFloat((it['NIGHT UNIT RATE PENCE PER UNIT/KWH']+'').replace(/[^\d.\-]/g,''));
+          if(!isNaN(night) && night > 0){
+            if(cheapestHomeNight == null || night < cheapestHomeNight.rate){
+              cheapestHomeNight = { rate: night, supplier: it['SUPPLIER'] || 'unknown' };
+            }
+          }
+        });
+      }catch(e){ /* comparison is a nice-to-have, never block the table on it */ }
+    }
+
+    async function loadData(){
+      let d = null;
+      try{
+        const r = await fetch(CONFIG.DATA_URL, { cache: 'no-store' });
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        d = await r.json();
+      }catch(e){
+        try{
+          const r2 = await fetch(CONFIG.LOCAL_FALLBACK, { cache: 'no-store' });
+          if(!r2.ok) throw new Error('HTTP ' + r2.status);
+          d = await r2.json();
+        }catch(e2){
+          document.getElementById('statusBar').innerHTML = '<span class="text-red-600">Could not load the charging price data. Try again shortly.</span>';
+          document.getElementById('tableBody').innerHTML = '<tr><td colspan="6" class="py-6 px-4 text-red-600">No data.</td></tr>';
+          return;
+        }
+      }
+      data = d;
+      rows = flatten(d);
+      renderStatus();
+      render();
+    }
+
+    window.onload = async ()=>{
+      ['bandFilter','accessFilter','efficiency'].forEach(id=>{
+        document.getElementById(id).addEventListener('change', render);
+      });
+      document.getElementById('hideUnpriced').addEventListener('change', render);
+      document.getElementById('refreshBtn').addEventListener('click', loadData);
+      document.querySelectorAll('th[data-sort]').forEach(th=>{
+        th.addEventListener('click', ()=>{
+          const k = th.getAttribute('data-sort');
+          if(k === sortKey){ sortAsc = !sortAsc; } else { sortKey = k; sortAsc = true; }
+          render();
+        });
+      });
+      document.getElementById('versionStamp').textContent = `v${CONFIG.VERSION}`;
+      await loadHomeTariffs();
+      await loadData();
+    };
+  </script>
+</body>
+</html>

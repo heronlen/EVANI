@@ -1,0 +1,48 @@
+name: Refresh NI public charging prices
+
+# Pulls current per-kWh prices from any charge point operator open data feed
+# recorded in public_charging_ni.json, and commits the result if anything moved.
+# Operators with no feed on file are left alone, so hand-checked rows survive.
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # 06:17 UTC daily
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Report what would change without committing'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-public-charging
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch operator feeds
+        run: node tools/refresh_public_charging.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit changes
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- public_charging_ni.json; then
+            echo "No price changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public_charging_ni.json
+          git commit -m "Refresh NI public charging prices from operator feeds"
+          git push
