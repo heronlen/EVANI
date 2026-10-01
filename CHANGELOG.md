@@ -1,8 +1,18 @@
 # EVANI Home Charging Calculator — Tariff Changelog
 
-All notable changes to the electricity tariff data, based on Consumer Council NI comparison tables.
+All notable changes to the electricity tariff data, based on Consumer Council NI comparison tables and other supplier sources.
 
 ---
+
+## 1 October 2026
+
+**Share Energy** — Standard and EV/Economy 7 tariffs up from today. Standard "Share 24" rates (Credit and Keypad) rise from 31.960p to 35.99p per unit — standing charges unchanged (13.330p bill pay, 16.670p keypad). EV and Eco 7 customers see day rate up from 32.040p to 36.49p and night rate up from 15.560p to 17.19p — standing charges also unchanged. Consumer Council NI's table hadn't caught up with this change at the time of writing, so these figures are taken directly from Share Energy's own published rates.
+
+**Budget Energy** — Table reshuffled. The "Bill Pay 29% Discount" tariff (which had been the cheapest standard rate around) has been withdrawn, along with the "Keypad 20% Discount" and "£80 Discount and Keypad 20% Discount" tariffs. The remaining standard tariffs (Billpay 25% Discount, Keypad Loyalty 20% Discount, £100 Loyalty 18% Discount, Keypad £60 Loyalty 16% Discount) are unchanged, but the two plain "no discount" tariffs are both up: Keypad Standard 24hr rises from 37.597p to 41.175p, and Bill Pay Standard 24hr rises from 38.367p to 42.010p. On the Economy 7 side, the "Keypad Promotional 1" tariff is up from 33.821p/16.499p to 37.030p/18.070p (standing charge also up, to 24.700p), and it's now a variable contract rather than a 1-year fixed term. Budget's other Economy 7 tariffs are unchanged.
+
+All other suppliers (Click Energy, Power NI, SSE Airtricity) — no change since the last update.
+
+*Note: as ever, we check Consumer Council NI's tables by hand and cross-check against supplier sources when something looks off or out of date — this update needed both, since CCNI hadn't picked up Share Energy's change yet.*
 
 ## 4 August 2026
 
@@ -36,4 +46,4 @@ All other suppliers (Power NI, Click Energy, Share Energy) — no change from th
 
 ---
 
-*Source: Consumer Council NI electricity and Economy 7 price comparison tables. Rates include VAT at 5%.*
+*Source: Consumer Council NI electricity and Economy 7 price comparison tables, cross-checked against individual supplier tariff pages when needed. Rates include VAT at 5%.*
