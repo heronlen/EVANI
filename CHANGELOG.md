@@ -4,6 +4,12 @@ All notable changes to the electricity tariff data, based on Consumer Council NI
 
 ---
 
+## 20 October 2026
+
+**Budget Energy** — A few small moves. The "Billpay 25% Discount" tariff is now a "Billpay 22% Discount": unit rate up from 31.510p to 32.770p and standing charge up from 13.220p to 15.940p. On Economy 7, the Keypad Economy 7 tariff is up from 40.262p/19.641p to 44.087p/21.507p (standing charge now 24.702p). Keypad Loyalty 20% Discount and Keypad Standard 24hr have only tiny adjustments (a fraction of a penny).
+
+All other suppliers (Click Energy, Power NI, SSE Airtricity, Share Energy) — no change since 1 October.
+
 ## 1 October 2026
 
 **Share Energy** — Standard and EV/Economy 7 tariffs up from today. Standard "Share 24" rates (Credit and Keypad) rise from 31.960p to 35.99p per unit — standing charges unchanged (13.330p bill pay, 16.670p keypad). EV and Eco 7 customers see day rate up from 32.040p to 36.49p and night rate up from 15.560p to 17.19p — standing charges also unchanged. Consumer Council NI's table hadn't caught up with this change at the time of writing, so these figures are taken directly from Share Energy's own published rates.
