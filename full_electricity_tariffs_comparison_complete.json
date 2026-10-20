@@ -1,20 +1,20 @@
 [
   {
     "SUPPLIER": "Budget Energy",
-    "TARIFF NAME": "Billpay 25% Discount",
+    "TARIFF NAME": "Billpay 22% Discount",
     "PAYMENT & BILLING METHOD": "Direct Debit e-bill",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "31.510",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.770",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "13.220",
-    "ADDITIONAL INFORMATION": "Variable contract discount of 25% on Budget standard unit rate. Includes Standing Charge. No Exit Fee. You must be a new customer moving to Budget Energy."
+    "STANDING CHARGE PENCE PER DAY": "15.940",
+    "ADDITIONAL INFORMATION": "Variable contract discount of 22% on Budget standard unit rate. Includes Standing Charge. No Exit Fee. You must be a new customer moving to Budget Energy."
   },
   {
     "SUPPLIER": "Budget Energy",
     "TARIFF NAME": "Keypad Loyalty 20% Discount",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.940",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "32.935",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "10.920",
+    "STANDING CHARGE PENCE PER DAY": "10.923",
     "ADDITIONAL INFORMATION": "Variable contract discount of 20% on Budget standard prepayment unit rate. No exit fee."
   },
   {
@@ -48,9 +48,9 @@
     "SUPPLIER": "Budget Energy",
     "TARIFF NAME": "Keypad Standard 24hr",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "41.175",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "41.169",
     "NIGHT UNIT RATE PENCE PER UNIT/KWH": "0",
-    "STANDING CHARGE PENCE PER DAY": "19.970",
+    "STANDING CHARGE PENCE PER DAY": "19.966",
     "ADDITIONAL INFORMATION": "No contract. No exit fee."
   },
   {
@@ -399,9 +399,9 @@
     "SUPPLIER": "Budget Energy",
     "TARIFF NAME": "Keypad Economy 7",
     "PAYMENT & BILLING METHOD": "Prepayment meter",
-    "DAY UNIT RATE PENCE PER UNIT/KWH": "40.262",
-    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "19.641",
-    "STANDING CHARGE PENCE PER DAY": "22.559",
+    "DAY UNIT RATE PENCE PER UNIT/KWH": "44.087",
+    "NIGHT UNIT RATE PENCE PER UNIT/KWH": "21.507",
+    "STANDING CHARGE PENCE PER DAY": "24.702",
     "ADDITIONAL INFORMATION": "No security deposit. No exit fee."
   },
   {
